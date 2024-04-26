@@ -1,0 +1,2 @@
+/usr/bin/ar qc libjnicode.a CMakeFiles/jnicode.dir/jnicode_autogen/mocs_compilation.cpp.o CMakeFiles/jnicode.dir/jvmConnector.cpp.o
+/usr/bin/ranlib libjnicode.a

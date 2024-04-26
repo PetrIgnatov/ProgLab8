@@ -1,0 +1,10 @@
+/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/connectionWindow.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/main.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/edit_cache.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/rebuild_cache.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/connectionWindow_autogen.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/main_autogen.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/jni/CMakeFiles/jnicode.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/jni/CMakeFiles/edit_cache.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/jni/CMakeFiles/rebuild_cache.dir
+/home/Petrign/Проги/ProgLab8/outputs/tmp/jni/CMakeFiles/jnicode_autogen.dir

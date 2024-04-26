@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconnectionWindow.a CMakeFiles/connectionWindow.dir/connectionWindow_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libconnectionWindow.a

@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+e156fb2aa7d3515a59ca8ced24509dc0 CMakeFiles/connectionWindow_autogen
+d09b6cd2ff081caa4fe8a73d7f76442c CMakeFiles/main_autogen
+02ff52f26f22af5bb12e6aa50daac817 jni/CMakeFiles/jnicode_autogen
