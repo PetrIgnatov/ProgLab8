@@ -7,4 +7,4 @@ COPY db.cfg db1.cfg
 COPY script1.gl script1.gl
 COPY script2.gl script2.gl
 COPY script3.gl script3.gl
-ENTRYPOINT ["java","-cp","psql.jar:app.jar", "ru.se.ifmo.prog.lab7.server.Main"]
+ENTRYPOINT ["java","-cp","psql.jar:app.jar", "ru.se.ifmo.prog.lab8.server.Main"]

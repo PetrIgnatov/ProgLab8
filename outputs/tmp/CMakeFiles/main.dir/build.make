@@ -111,11 +111,56 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/windows/connectionWindow.cpp.s"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/connectionWindow.cpp -o CMakeFiles/main.dir/windows/connectionWindow.cpp.s
 
+CMakeFiles/main.dir/windows/mainPage.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.cpp
+CMakeFiles/main.dir/windows/mainPage.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/windows/mainPage.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/windows/mainPage.cpp.o -MF CMakeFiles/main.dir/windows/mainPage.cpp.o.d -o CMakeFiles/main.dir/windows/mainPage.cpp.o -c /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.cpp
+
+CMakeFiles/main.dir/windows/mainPage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/windows/mainPage.cpp.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.cpp > CMakeFiles/main.dir/windows/mainPage.cpp.i
+
+CMakeFiles/main.dir/windows/mainPage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/windows/mainPage.cpp.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.cpp -o CMakeFiles/main.dir/windows/mainPage.cpp.s
+
+CMakeFiles/main.dir/windows/dragonField.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/windows/dragonField.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp
+CMakeFiles/main.dir/windows/dragonField.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/windows/dragonField.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/windows/dragonField.cpp.o -MF CMakeFiles/main.dir/windows/dragonField.cpp.o.d -o CMakeFiles/main.dir/windows/dragonField.cpp.o -c /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp
+
+CMakeFiles/main.dir/windows/dragonField.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/windows/dragonField.cpp.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp > CMakeFiles/main.dir/windows/dragonField.cpp.i
+
+CMakeFiles/main.dir/windows/dragonField.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/windows/dragonField.cpp.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp -o CMakeFiles/main.dir/windows/dragonField.cpp.s
+
+CMakeFiles/main.dir/windows/commandWindow.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/windows/commandWindow.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.cpp
+CMakeFiles/main.dir/windows/commandWindow.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/windows/commandWindow.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/windows/commandWindow.cpp.o -MF CMakeFiles/main.dir/windows/commandWindow.cpp.o.d -o CMakeFiles/main.dir/windows/commandWindow.cpp.o -c /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.cpp
+
+CMakeFiles/main.dir/windows/commandWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/windows/commandWindow.cpp.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.cpp > CMakeFiles/main.dir/windows/commandWindow.cpp.i
+
+CMakeFiles/main.dir/windows/commandWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/windows/commandWindow.cpp.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.cpp -o CMakeFiles/main.dir/windows/commandWindow.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/windows/connectionWindow.cpp.o"
+"CMakeFiles/main.dir/windows/connectionWindow.cpp.o" \
+"CMakeFiles/main.dir/windows/mainPage.cpp.o" \
+"CMakeFiles/main.dir/windows/dragonField.cpp.o" \
+"CMakeFiles/main.dir/windows/commandWindow.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -123,6 +168,9 @@ main_EXTERNAL_OBJECTS =
 /home/Petrign/Проги/ProgLab8/outputs/main: CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.o
 /home/Petrign/Проги/ProgLab8/outputs/main: CMakeFiles/main.dir/main.cpp.o
 /home/Petrign/Проги/ProgLab8/outputs/main: CMakeFiles/main.dir/windows/connectionWindow.cpp.o
+/home/Petrign/Проги/ProgLab8/outputs/main: CMakeFiles/main.dir/windows/mainPage.cpp.o
+/home/Petrign/Проги/ProgLab8/outputs/main: CMakeFiles/main.dir/windows/dragonField.cpp.o
+/home/Petrign/Проги/ProgLab8/outputs/main: CMakeFiles/main.dir/windows/commandWindow.cpp.o
 /home/Petrign/Проги/ProgLab8/outputs/main: CMakeFiles/main.dir/build.make
 /home/Petrign/Проги/ProgLab8/outputs/main: /usr/lib64/libQt5Widgets.so.5.15.8
 /home/Petrign/Проги/ProgLab8/outputs/main: /usr/lib64/libQt5Gui.so.5.15.8
@@ -132,7 +180,7 @@ main_EXTERNAL_OBJECTS =
 /home/Petrign/Проги/ProgLab8/outputs/main: /usr/lib/jvm/java/lib/libjawt.so
 /home/Petrign/Проги/ProgLab8/outputs/main: /usr/lib/jvm/java/lib/server/libjvm.so
 /home/Petrign/Проги/ProgLab8/outputs/main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/Petrign/Проги/ProgLab8/outputs/main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable /home/Petrign/Проги/ProgLab8/outputs/main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

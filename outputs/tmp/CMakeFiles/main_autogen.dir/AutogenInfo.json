@@ -95,9 +95,27 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.h",
+			"MU",
+			"Z5D6VF4H2M/moc_commandWindow.cpp",
+			null
+		],
+		[
 			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/connectionWindow.h",
 			"MU",
 			"Z5D6VF4H2M/moc_connectionWindow.cpp",
+			null
+		],
+		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h",
+			"MU",
+			"Z5D6VF4H2M/moc_dragonField.cpp",
+			null
+		],
+		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.h",
+			"MU",
+			"Z5D6VF4H2M/moc_mainPage.cpp",
 			null
 		]
 	],
@@ -159,7 +177,22 @@
 			null
 		],
 		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/connectionWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.cpp",
 			"MU",
 			null
 		]

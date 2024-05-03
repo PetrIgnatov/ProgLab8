@@ -130,6 +130,45 @@ connectionWindow/fast:
 .PHONY : connectionWindow/fast
 
 #=============================================================================
+# Target rules for targets named mainPage
+
+# Build rule for target.
+mainPage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mainPage
+.PHONY : mainPage
+
+# fast build rule for target.
+mainPage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage.dir/build.make CMakeFiles/mainPage.dir/build
+.PHONY : mainPage/fast
+
+#=============================================================================
+# Target rules for targets named dragonField
+
+# Build rule for target.
+dragonField: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dragonField
+.PHONY : dragonField
+
+# fast build rule for target.
+dragonField/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField.dir/build.make CMakeFiles/dragonField.dir/build
+.PHONY : dragonField/fast
+
+#=============================================================================
+# Target rules for targets named commandWindow
+
+# Build rule for target.
+commandWindow: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 commandWindow
+.PHONY : commandWindow
+
+# fast build rule for target.
+commandWindow/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/commandWindow.dir/build.make CMakeFiles/commandWindow.dir/build
+.PHONY : commandWindow/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -154,6 +193,45 @@ connectionWindow_autogen: cmake_check_build_system
 connectionWindow_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/connectionWindow_autogen.dir/build.make CMakeFiles/connectionWindow_autogen.dir/build
 .PHONY : connectionWindow_autogen/fast
+
+#=============================================================================
+# Target rules for targets named mainPage_autogen
+
+# Build rule for target.
+mainPage_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mainPage_autogen
+.PHONY : mainPage_autogen
+
+# fast build rule for target.
+mainPage_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage_autogen.dir/build.make CMakeFiles/mainPage_autogen.dir/build
+.PHONY : mainPage_autogen/fast
+
+#=============================================================================
+# Target rules for targets named dragonField_autogen
+
+# Build rule for target.
+dragonField_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dragonField_autogen
+.PHONY : dragonField_autogen
+
+# fast build rule for target.
+dragonField_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField_autogen.dir/build.make CMakeFiles/dragonField_autogen.dir/build
+.PHONY : dragonField_autogen/fast
+
+#=============================================================================
+# Target rules for targets named commandWindow_autogen
+
+# Build rule for target.
+commandWindow_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 commandWindow_autogen
+.PHONY : commandWindow_autogen
+
+# fast build rule for target.
+commandWindow_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/commandWindow_autogen.dir/build.make CMakeFiles/commandWindow_autogen.dir/build
+.PHONY : commandWindow_autogen/fast
 
 #=============================================================================
 # Target rules for targets named main_autogen
@@ -194,6 +272,30 @@ jnicode_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f jni/CMakeFiles/jnicode_autogen.dir/build.make jni/CMakeFiles/jnicode_autogen.dir/build
 .PHONY : jnicode_autogen/fast
 
+commandWindow_autogen/mocs_compilation.o: commandWindow_autogen/mocs_compilation.cpp.o
+.PHONY : commandWindow_autogen/mocs_compilation.o
+
+# target to build an object file
+commandWindow_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/commandWindow.dir/build.make CMakeFiles/commandWindow.dir/commandWindow_autogen/mocs_compilation.cpp.o
+.PHONY : commandWindow_autogen/mocs_compilation.cpp.o
+
+commandWindow_autogen/mocs_compilation.i: commandWindow_autogen/mocs_compilation.cpp.i
+.PHONY : commandWindow_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+commandWindow_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/commandWindow.dir/build.make CMakeFiles/commandWindow.dir/commandWindow_autogen/mocs_compilation.cpp.i
+.PHONY : commandWindow_autogen/mocs_compilation.cpp.i
+
+commandWindow_autogen/mocs_compilation.s: commandWindow_autogen/mocs_compilation.cpp.s
+.PHONY : commandWindow_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+commandWindow_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/commandWindow.dir/build.make CMakeFiles/commandWindow.dir/commandWindow_autogen/mocs_compilation.cpp.s
+.PHONY : commandWindow_autogen/mocs_compilation.cpp.s
+
 connectionWindow_autogen/mocs_compilation.o: connectionWindow_autogen/mocs_compilation.cpp.o
 .PHONY : connectionWindow_autogen/mocs_compilation.o
 
@@ -217,6 +319,30 @@ connectionWindow_autogen/mocs_compilation.s: connectionWindow_autogen/mocs_compi
 connectionWindow_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/connectionWindow.dir/build.make CMakeFiles/connectionWindow.dir/connectionWindow_autogen/mocs_compilation.cpp.s
 .PHONY : connectionWindow_autogen/mocs_compilation.cpp.s
+
+dragonField_autogen/mocs_compilation.o: dragonField_autogen/mocs_compilation.cpp.o
+.PHONY : dragonField_autogen/mocs_compilation.o
+
+# target to build an object file
+dragonField_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField.dir/build.make CMakeFiles/dragonField.dir/dragonField_autogen/mocs_compilation.cpp.o
+.PHONY : dragonField_autogen/mocs_compilation.cpp.o
+
+dragonField_autogen/mocs_compilation.i: dragonField_autogen/mocs_compilation.cpp.i
+.PHONY : dragonField_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+dragonField_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField.dir/build.make CMakeFiles/dragonField.dir/dragonField_autogen/mocs_compilation.cpp.i
+.PHONY : dragonField_autogen/mocs_compilation.cpp.i
+
+dragonField_autogen/mocs_compilation.s: dragonField_autogen/mocs_compilation.cpp.s
+.PHONY : dragonField_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+dragonField_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField.dir/build.make CMakeFiles/dragonField.dir/dragonField_autogen/mocs_compilation.cpp.s
+.PHONY : dragonField_autogen/mocs_compilation.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -242,6 +368,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mainPage_autogen/mocs_compilation.o: mainPage_autogen/mocs_compilation.cpp.o
+.PHONY : mainPage_autogen/mocs_compilation.o
+
+# target to build an object file
+mainPage_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage.dir/build.make CMakeFiles/mainPage.dir/mainPage_autogen/mocs_compilation.cpp.o
+.PHONY : mainPage_autogen/mocs_compilation.cpp.o
+
+mainPage_autogen/mocs_compilation.i: mainPage_autogen/mocs_compilation.cpp.i
+.PHONY : mainPage_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+mainPage_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage.dir/build.make CMakeFiles/mainPage.dir/mainPage_autogen/mocs_compilation.cpp.i
+.PHONY : mainPage_autogen/mocs_compilation.cpp.i
+
+mainPage_autogen/mocs_compilation.s: mainPage_autogen/mocs_compilation.cpp.s
+.PHONY : mainPage_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+mainPage_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage.dir/build.make CMakeFiles/mainPage.dir/mainPage_autogen/mocs_compilation.cpp.s
+.PHONY : mainPage_autogen/mocs_compilation.cpp.s
+
 main_autogen/mocs_compilation.o: main_autogen/mocs_compilation.cpp.o
 .PHONY : main_autogen/mocs_compilation.o
 
@@ -265,6 +415,30 @@ main_autogen/mocs_compilation.s: main_autogen/mocs_compilation.cpp.s
 main_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.s
 .PHONY : main_autogen/mocs_compilation.cpp.s
+
+windows/commandWindow.o: windows/commandWindow.cpp.o
+.PHONY : windows/commandWindow.o
+
+# target to build an object file
+windows/commandWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/commandWindow.cpp.o
+.PHONY : windows/commandWindow.cpp.o
+
+windows/commandWindow.i: windows/commandWindow.cpp.i
+.PHONY : windows/commandWindow.i
+
+# target to preprocess a source file
+windows/commandWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/commandWindow.cpp.i
+.PHONY : windows/commandWindow.cpp.i
+
+windows/commandWindow.s: windows/commandWindow.cpp.s
+.PHONY : windows/commandWindow.s
+
+# target to generate assembly for a file
+windows/commandWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/commandWindow.cpp.s
+.PHONY : windows/commandWindow.cpp.s
 
 windows/connectionWindow.o: windows/connectionWindow.cpp.o
 .PHONY : windows/connectionWindow.o
@@ -290,6 +464,54 @@ windows/connectionWindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/connectionWindow.cpp.s
 .PHONY : windows/connectionWindow.cpp.s
 
+windows/dragonField.o: windows/dragonField.cpp.o
+.PHONY : windows/dragonField.o
+
+# target to build an object file
+windows/dragonField.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/dragonField.cpp.o
+.PHONY : windows/dragonField.cpp.o
+
+windows/dragonField.i: windows/dragonField.cpp.i
+.PHONY : windows/dragonField.i
+
+# target to preprocess a source file
+windows/dragonField.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/dragonField.cpp.i
+.PHONY : windows/dragonField.cpp.i
+
+windows/dragonField.s: windows/dragonField.cpp.s
+.PHONY : windows/dragonField.s
+
+# target to generate assembly for a file
+windows/dragonField.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/dragonField.cpp.s
+.PHONY : windows/dragonField.cpp.s
+
+windows/mainPage.o: windows/mainPage.cpp.o
+.PHONY : windows/mainPage.o
+
+# target to build an object file
+windows/mainPage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/mainPage.cpp.o
+.PHONY : windows/mainPage.cpp.o
+
+windows/mainPage.i: windows/mainPage.cpp.i
+.PHONY : windows/mainPage.i
+
+# target to preprocess a source file
+windows/mainPage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/mainPage.cpp.i
+.PHONY : windows/mainPage.cpp.i
+
+windows/mainPage.s: windows/mainPage.cpp.s
+.PHONY : windows/mainPage.s
+
+# target to generate assembly for a file
+windows/mainPage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/windows/mainPage.cpp.s
+.PHONY : windows/mainPage.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -298,24 +520,48 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... commandWindow_autogen"
 	@echo "... connectionWindow_autogen"
+	@echo "... dragonField_autogen"
 	@echo "... jnicode_autogen"
+	@echo "... mainPage_autogen"
 	@echo "... main_autogen"
+	@echo "... commandWindow"
 	@echo "... connectionWindow"
+	@echo "... dragonField"
 	@echo "... jnicode"
 	@echo "... main"
+	@echo "... mainPage"
+	@echo "... commandWindow_autogen/mocs_compilation.o"
+	@echo "... commandWindow_autogen/mocs_compilation.i"
+	@echo "... commandWindow_autogen/mocs_compilation.s"
 	@echo "... connectionWindow_autogen/mocs_compilation.o"
 	@echo "... connectionWindow_autogen/mocs_compilation.i"
 	@echo "... connectionWindow_autogen/mocs_compilation.s"
+	@echo "... dragonField_autogen/mocs_compilation.o"
+	@echo "... dragonField_autogen/mocs_compilation.i"
+	@echo "... dragonField_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mainPage_autogen/mocs_compilation.o"
+	@echo "... mainPage_autogen/mocs_compilation.i"
+	@echo "... mainPage_autogen/mocs_compilation.s"
 	@echo "... main_autogen/mocs_compilation.o"
 	@echo "... main_autogen/mocs_compilation.i"
 	@echo "... main_autogen/mocs_compilation.s"
+	@echo "... windows/commandWindow.o"
+	@echo "... windows/commandWindow.i"
+	@echo "... windows/commandWindow.s"
 	@echo "... windows/connectionWindow.o"
 	@echo "... windows/connectionWindow.i"
 	@echo "... windows/connectionWindow.s"
+	@echo "... windows/dragonField.o"
+	@echo "... windows/dragonField.i"
+	@echo "... windows/dragonField.s"
+	@echo "... windows/mainPage.o"
+	@echo "... windows/mainPage.i"
+	@echo "... windows/mainPage.s"
 .PHONY : help
 
 

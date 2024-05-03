@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdragonField.a CMakeFiles/dragonField.dir/dragonField_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libdragonField.a

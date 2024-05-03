@@ -35,9 +35,17 @@ public class Main {
 			System.out.println("Фатальная ошибка! Дайте программисту по горбу");
 		}
 	}*/
-	public static boolean connect(String host) {
+	public static boolean connect(String host, String port) {
 		connector = new UDPConnector();
-                connector.connect(host, 6789);
+		int iPort = 0;
+		try {
+			iPort = Integer.parseInt(port);
+		}
+		catch (Exception e) {
+			System.out.println("Ошибка! Порт должен быть числом");
+			return false;
+		}
+                connector.connect(host, iPort);
                 sender = new UDPSender(connector.getDatagramChannel(), connector.getAddress());
                 reader = new UDPReader(connector.getDatagramChannel());
 		try {
@@ -49,13 +57,151 @@ public class Main {
 			sender.send(arr);
 			String[] response = reader.getResponse().getMessage();
 			if (response.length > 0 && response[0].equals("success!")) {
-				System.out.println(response[0]);
 				return true;
 			}
 			return false;
 		}
 		catch (Exception e) {
 			System.out.println(e.getMessage());
+			return false;
+		}
+	}
+	
+	public static boolean register(String login, String password) {
+		try {
+			StringShallow shallow = new StringShallow(new String[]{"register", login, password}, login, password);
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos.writeObject(shallow);
+			byte[] arr = baos.toByteArray();
+			sender.send(arr);
+			String[] response = reader.getResponse().getMessage();
+			if (response.length > 0 && response[0].equals("Вы успешно зашли в систему")) {
+				return true;
+			}
+			return false;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return false;
+		}
+	}
+
+	public static boolean signIn(String login, String password) {
+		try {
+			StringShallow shallow = new StringShallow(new String[]{"sign_in", login, password}, "", "");
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos.writeObject(shallow);
+			byte[] arr = baos.toByteArray();
+			sender.send(arr);
+			String[] response = reader.getResponse().getMessage();
+			if (response.length > 0 && response[0].equals("Вы успешно зашли в систему")) {
+				return true;
+			}
+			return false;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return false;
+		}
+	}
+
+	public static String[][] getDragons(String login, String password) {
+		try {
+			StringShallow shallow = new StringShallow(new String[]{"show"}, login, password);
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos.writeObject(shallow);
+			byte[] arr = baos.toByteArray();
+			sender.send(arr);
+			String[] response = reader.getResponse().getMessage(); 
+			String[][] ans = new String[response.length][11];
+			for (int i = 0; i < response.length; ++i) {
+				String[] spl = response[i].split(";");
+				if (spl.length != 11) {
+					return null;
+				}
+				for (int j = 0; j < 11; ++j) {
+					ans[i][j] = spl[j];
+				}
+			}
+			/*
+			if (response.length > 0 && response[0].equals("Вы успешно зашли в систему")) {
+				return true;
+			}
+			return false;*/
+			System.out.println(response[response.length-1]);
+			return ans;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+
+	public static String sendCommand(String com, String login, String password) {
+		try {
+			System.out.println("Sending command");
+			StringShallow shallow = new StringShallow(com.split(" "), login, password);
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos.writeObject(shallow);
+			byte[] arr = baos.toByteArray();
+			sender.send(arr);
+			String[] response = reader.getResponse().getMessage();
+			String resp = "";
+			for (int i = 0; i < response.length; ++i) {
+				resp += response[i];
+			}
+			return resp;
+		}
+		catch (Exception e) {
+			return e.getMessage();
+		}
+	}
+
+	public static boolean remove(String id, String login, String password) {
+		try {
+			StringShallow shallow = new StringShallow(new String[]{"remove_by_id", id}, login, password);
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos.writeObject(shallow);
+			byte[] arr = baos.toByteArray();
+			sender.send(arr);
+			String[] response = reader.getResponse().getMessage();
+			return true;
+		}
+		catch (Exception e) {
+			return false;
+		}
+	}
+
+	public static boolean change(String id, String[] params, String login, String password) {
+		try {
+			{
+				StringShallow shallow = new StringShallow(new String[]{"update", id}, login, password);
+				ByteArrayOutputStream baos = new ByteArrayOutputStream();
+				ObjectOutputStream oos = new ObjectOutputStream(baos);
+				oos.writeObject(shallow);
+				byte[] arr = baos.toByteArray();
+				sender.send(arr);
+				String[] response = reader.getResponse().getMessage();
+				System.out.println(response[0]);
+			}
+			for (int i = 0; i < params.length; ++i) {
+				StringShallow shallow = new StringShallow(new String[]{params[i]}, login, password);
+                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                                ObjectOutputStream oos = new ObjectOutputStream(baos);
+                                oos.writeObject(shallow);
+                                byte[] arr = baos.toByteArray();
+                                sender.send(arr);
+                                String[] response = reader.getResponse().getMessage();
+                                System.out.println(response[0]);
+			}
+			return true;
+		}
+		catch (Exception e) {
 			return false;
 		}
 	}

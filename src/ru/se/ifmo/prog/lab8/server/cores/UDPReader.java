@@ -188,6 +188,7 @@ public class UDPReader {
 				if (command.getCommand().length == 1 && command.getCommand()[0].equals("connect")) {
 					Response response = new Response(new String[]{"success!"});
 					sender.send(response, datagramPacket.getAddress(), datagramPacket.getPort(), logger);
+					return;
 				}
 				//logger.info((curCommPar.get(command.getLogin()) == null ? 0 : curCommPar.get(command.getLogin())) + " vs " + (lastComm.get(command.getLogin()) == null ? 0 : lastComm.get(command.getLogin()).getCommand().getParameterAdvices() == null ? 0 : lastComm.get(command.getLogin()).getCommand().getParameterAdvices().length));
 				if (!lastComm.containsKey(command.getLogin()) || lastComm.get(command.getLogin()).getCommand().getParameterAdvices() == null || curCommPar.get(command.getLogin()) >= lastComm.get(command.getLogin()).getCommand().getParameterAdvices().length) { //Если введена команда
@@ -231,7 +232,8 @@ public class UDPReader {
 						if (!lastComm.get(command.getLogin()).getCommand().getChecker(curPar).check(par)) {
 							Response response = new Response(new String[]{"Неправильный аргумент, попробуйте снова"});
 							sender.send(response, datagramPacket.getAddress(), datagramPacket.getPort(), logger);
-	                                                return;
+	                                                curCommPar.put(command.getLogin(), 1000000);
+							return;
 						}
 					}
 					catch (Exception e) {

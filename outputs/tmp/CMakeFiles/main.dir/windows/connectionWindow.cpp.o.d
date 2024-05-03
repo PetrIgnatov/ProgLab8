@@ -248,4 +248,10 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o: \
  /usr/include/c++/12/bits/istream.tcc /usr/include/qt5/QtGui/QPainter \
  /usr/include/qt5/QtGui/qpainter.h /usr/include/qt5/QtGui/QPen \
  /usr/include/qt5/QtGui/qpen.h /usr/include/qt5/QtGui/QColor \
- /usr/include/qt5/QtGui/qcolor.h
+ /usr/include/qt5/QtGui/qcolor.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.h \
+ /usr/include/qt5/QtWidgets/QHBoxLayout \
+ /usr/include/qt5/QtWidgets/QScrollArea \
+ /usr/include/qt5/QtWidgets/qscrollarea.h \
+ /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h

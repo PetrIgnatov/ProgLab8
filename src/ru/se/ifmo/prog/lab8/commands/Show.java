@@ -13,8 +13,7 @@ public class Show extends Command {
 		if (stacksize > 10000) {
 			return new Response(new String[0]);
 		}
-		String[] response = {collectiondata.dragonsString()};
 		//String[] response = collectiondata.getDragons().stream().map(dr -> dr.toString()).toArray(String[]::new);
-		return new Response(response);
+		return new Response(collectiondata.dragonsStringArr());
 	}
 }

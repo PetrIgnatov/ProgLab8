@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcommandWindow.a CMakeFiles/commandWindow.dir/commandWindow_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libcommandWindow.a

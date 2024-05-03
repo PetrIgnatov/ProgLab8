@@ -429,6 +429,18 @@ public class CollectionData {
 		}
 		return s;
 	}
+
+	public String[] dragonsStringArr() {
+		System.out.println("DragonsStringArr");
+		String[] s = new String[Math.min(dragons.size(), 100)];
+		System.out.println(dragons.size()-s.length+0);
+		for (int i = 0; i < s.length; ++i) {
+			System.out.println(dragons.size()-s.length+i);
+			s[i] = dragons.get(Math.max(dragons.size()-s.length+i, 0)).toString();
+			System.out.println(s[i]);
+		}
+		return s;
+	}
 	@Override
 	public String toString() {
 		return "LinkedList<Dragon>;" + initDate.toString() + ";" + Integer.toString(dragons.size()) + " elements;";

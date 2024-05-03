@@ -24,7 +24,15 @@ include_directories(jni)
 
 add_library(connectionWindow STATIC windows/connectionWindow.h)
 
-add_executable(main main.cpp windows/connectionWindow.cpp)
+add_library(mainPage STATIC windows/mainPage.h)
+
+add_library(dragonField STATIC windows/dragonField.h)
+
+add_library(commandWindow STATIC windows/commandWindow.h)
+
+add_executable(main main.cpp windows/connectionWindow.cpp windows/mainPage.cpp windows/dragonField.cpp windows/commandWindow.cpp)
+
+#add_executable(main main.cpp windows/connectionWindow.cpp)
 
 add_subdirectory(jni)
 

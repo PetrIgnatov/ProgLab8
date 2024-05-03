@@ -256,4 +256,10 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/qt5/QtGui/qinputmethod.h /usr/include/qt5/QtCore/qlocale.h \
  /usr/include/qt5/QtWidgets/QFormLayout \
  /usr/include/qt5/QtWidgets/qformlayout.h \
- /usr/include/qt5/QtWidgets/QLayout /usr/include/qt5/QtWidgets/qlayout.h
+ /usr/include/qt5/QtWidgets/QLayout /usr/include/qt5/QtWidgets/qlayout.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.h \
+ /usr/include/qt5/QtWidgets/QHBoxLayout \
+ /usr/include/qt5/QtWidgets/QScrollArea \
+ /usr/include/qt5/QtWidgets/qscrollarea.h \
+ /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h

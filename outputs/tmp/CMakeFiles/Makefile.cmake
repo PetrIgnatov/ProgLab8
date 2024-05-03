@@ -100,6 +100,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/connectionWindow_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/mainPage_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/dragonField_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/commandWindow_autogen.dir/AutogenInfo.json"
   "CMakeFiles/main_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "jni/CMakeFiles/jnicode_autogen.dir/AutogenInfo.json"
@@ -109,8 +112,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/connectionWindow.dir/DependInfo.cmake"
+  "CMakeFiles/mainPage.dir/DependInfo.cmake"
+  "CMakeFiles/dragonField.dir/DependInfo.cmake"
+  "CMakeFiles/commandWindow.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   "CMakeFiles/connectionWindow_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/mainPage_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/dragonField_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/commandWindow_autogen.dir/DependInfo.cmake"
   "CMakeFiles/main_autogen.dir/DependInfo.cmake"
   "jni/CMakeFiles/jnicode.dir/DependInfo.cmake"
   "jni/CMakeFiles/jnicode_autogen.dir/DependInfo.cmake"

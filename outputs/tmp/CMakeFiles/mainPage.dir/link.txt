@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmainPage.a CMakeFiles/mainPage.dir/mainPage_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libmainPage.a

@@ -1,4 +1,7 @@
 # Hashes of file build rules.
+15d7af122f2f5f6f8fd5c93f5026e6e0 CMakeFiles/commandWindow_autogen
 e156fb2aa7d3515a59ca8ced24509dc0 CMakeFiles/connectionWindow_autogen
+8cdb8eed127db8ff0bdb137b85fe99db CMakeFiles/dragonField_autogen
+844ecf7015538b46cac55cb4b61b19f1 CMakeFiles/mainPage_autogen
 d09b6cd2ff081caa4fe8a73d7f76442c CMakeFiles/main_autogen
 02ff52f26f22af5bb12e6aa50daac817 jni/CMakeFiles/jnicode_autogen

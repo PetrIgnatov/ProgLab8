@@ -10,6 +10,7 @@
 #include <functional>
 #include <QFormLayout>
 #include <QLineEdit>
+#include "windows/mainPage.h"
 
 /*
 void onClick(char* funcName) {
@@ -30,8 +31,10 @@ int main(int argc, char** argv) {
 		exit(EXIT_FAILURE);
 	}	
 	QApplication app(argc, argv);
+//	QTranslator appTranslator;
+	QString login = "";
+	QString password = "";
 	connectionWindow connection(0, connector.getEnv(), connector.getClass());
-	connection.resize(800,500);
 	connection.setWindowTitle("Connect to server");
 	connection.show();
 	return app.exec();

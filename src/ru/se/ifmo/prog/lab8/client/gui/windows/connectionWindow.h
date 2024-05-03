@@ -7,6 +7,7 @@
 #include <jni.h>
 #include <QGridLayout>
 #include <QVBoxLayout>
+#include <string>
 
 class connectionWindow : public QWidget {
 	public:
@@ -16,15 +17,26 @@ class connectionWindow : public QWidget {
 	private:
 		QVBoxLayout* vbox;
 		QGridLayout* grid;
+		QGridLayout* butGrid;
 		QLabel* host;
 		QLabel* port;
 		QLabel* error;
 		QLineEdit* hostIn;
 		QLineEdit* portIn;
 		QPushButton* confirm;
+		QLabel* login;
+		QLabel* password;
+		QLineEdit* loginIn;
+		QLineEdit* passwordIn;
+		QPushButton* signIn;
+		QPushButton* reg;
 		JNIEnv* jnienv;
 		jclass* jcl;
 		void drawBackground();
+		void changeWindow();
+		void createAnother();
 	private slots:
-		void onClick();
+		void onConClick();
+		void onRegClick();
+		void onSignInClick();
 };
