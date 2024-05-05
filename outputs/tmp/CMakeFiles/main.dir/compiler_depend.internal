@@ -375,6 +375,12 @@ CMakeFiles/main.dir/main.cpp.o
  /usr/include/qt5/QtWidgets/qscrollarea.h
  /usr/include/qt5/QtWidgets/qabstractscrollarea.h
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h
+ /usr/include/qt5/QtCore/QTimer
+ /usr/include/qt5/QtCore/qtimer.h
+ /usr/include/qt5/QtCore/qbasictimer.h
+ /usr/include/c++/12/thread
+ /usr/include/c++/12/bits/std_thread.h
+ /usr/include/c++/12/bits/this_thread_sleep.h
 
 CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.o
  /home/Petrign/Проги/ProgLab8/outputs/tmp/main_autogen/mocs_compilation.cpp
@@ -1120,6 +1126,12 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o
  /usr/include/qt5/QtWidgets/qscrollarea.h
  /usr/include/qt5/QtWidgets/qabstractscrollarea.h
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h
+ /usr/include/qt5/QtCore/QTimer
+ /usr/include/qt5/QtCore/qtimer.h
+ /usr/include/qt5/QtCore/qbasictimer.h
+ /usr/include/c++/12/thread
+ /usr/include/c++/12/bits/std_thread.h
+ /usr/include/c++/12/bits/this_thread_sleep.h
 
 CMakeFiles/main.dir/windows/dragonField.cpp.o
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp
@@ -1813,6 +1825,9 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o
  /usr/include/qt5/QtWidgets/qscrollarea.h
  /usr/include/qt5/QtWidgets/qabstractscrollarea.h
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h
+ /usr/include/qt5/QtCore/QTimer
+ /usr/include/qt5/QtCore/qtimer.h
+ /usr/include/qt5/QtCore/qbasictimer.h
  /usr/include/c++/12/iostream
  /usr/include/c++/12/ostream
  /usr/include/c++/12/ios
@@ -1842,4 +1857,7 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o
  /usr/include/qt5/QtWidgets/qtextedit.h
  /usr/include/qt5/QtGui/qtextdocument.h
  /usr/include/qt5/QtCore/qurl.h
+ /usr/include/qt5/QtWidgets/QScrollBar
+ /usr/include/qt5/QtWidgets/qscrollbar.h
+ /usr/include/qt5/QtWidgets/qabstractslider.h
 

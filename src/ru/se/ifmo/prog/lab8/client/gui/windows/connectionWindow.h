@@ -34,6 +34,7 @@ class connectionWindow : public QWidget {
 		jclass* jcl;
 		void drawBackground();
 		void changeWindow();
+		void getMsg();
 		void createAnother();
 	private slots:
 		void onConClick();

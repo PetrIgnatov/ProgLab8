@@ -12,6 +12,19 @@
 #include <QPen>
 #include <QColor>
 #include "mainPage.h"
+#include <thread>
+
+void connectionWindow::getMsg() {
+	/*jmethodID method = jnienv->GetStaticMethodID(*jcl, "getMsg", "()V");
+	if (method == 0) {
+		std::cout << "Error!";
+		return;
+	}	
+	jnienv->CallStaticVoidMethod(*jcl, method);*/
+	while(true) {
+		std::cout << "Ok\n";
+	}
+}
 
 connectionWindow::connectionWindow(QWidget* parent, JNIEnv* env, jclass* cl) : QWidget(parent) {
 	jnienv = env;

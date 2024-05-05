@@ -10,6 +10,7 @@
 #include <QHBoxLayout>
 #include <QScrollArea>
 #include "dragonField.h"
+#include <QTimer>
 
 class mainPage : public QWidget {
 	public:
@@ -35,9 +36,15 @@ class mainPage : public QWidget {
 		QWidget*** dragon;
 		QString loginStr;
 		QString passwordStr;
+		QTimer* timer;
+		dragonField* dragonfield;
+		bool firstUpdate;
+		int vscroll;
+		int hscroll;
 		void drawBackground();
 		void deleteDragon(QString num);
 		void changeDragon(QString num, int n);
+		void checkUpd();
 	private slots:
 		void drawGui();
 		void openComW();

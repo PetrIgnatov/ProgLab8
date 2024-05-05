@@ -23,7 +23,7 @@ public class Console implements Serializable {
 	private String password;
 	private String serverip;
 	private int serverport;
-
+/*
 	public Console(UDPSender sender, UDPReader reader) throws NoSuchAlgorithmException {
 		this.scanner = new Scanner(System.in);
 		this.active = true;
@@ -43,9 +43,6 @@ public class Console implements Serializable {
 		boolean con = false;
 		String host = "";
 		int port = 0;
-		/*Pattern pattern = Pattern.compile("^((25[0-5]|(2[0-4]|1\\d|[1-9]|)\\d)\\.?\\b){4}$");	
-		Patter ipv6pattern = Patter.compile("(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))");
-		*/
 		while (!con) {
 			con = true;
 			this.print("Введите IP хоста: ");
@@ -151,24 +148,6 @@ public class Console implements Serializable {
 		//}
 	}
 
-	/*
-	private void sendCommand(CommandShallow shallow) throws IOException {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		ObjectOutputStream oos = new ObjectOutputStream(baos);
-		oos.writeObject(shallow);
-		byte[] arr = baos.toByteArray();
-		sender.send(arr);
-		Response response = reader.getResponse();
-		for (String s: response.getMessage()) {
-			if (s.equals("exit")) {
-				this.stop();
-				break;
-			}
-			System.out.println(s);
-		}
-
-	}
-*/
 	public String readln() {
 		if (commandsStack.size() == 0) {
 			stacksize = 0;
@@ -183,5 +162,6 @@ public class Console implements Serializable {
 	public void stop() {
 		active = false;
 	}
+*/
 }
 

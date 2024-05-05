@@ -7,11 +7,14 @@ import ru.se.ifmo.prog.lab8.client.back.cores.*;
 import java.util.*;
 import ru.se.ifmo.prog.lab8.exceptions.*;
 import java.io.*;
+import ru.se.ifmo.prog.lab8.client.back.threads.*;
+import java.util.concurrent.*;
 
 public class Main {
 	private static UDPConnector connector;
 	private static UDPSender sender;
 	private static UDPReader reader;
+	private static ReadThread readThread;
 
 	static {
                 UDPConnector connector = new UDPConnector();
@@ -55,7 +58,7 @@ public class Main {
 			oos.writeObject(shallow);
 			byte[] arr = baos.toByteArray();
 			sender.send(arr);
-			String[] response = reader.getResponse().getMessage();
+			String[] response = reader.getResponse(false).getMessage();
 			if (response.length > 0 && response[0].equals("success!")) {
 				return true;
 			}
@@ -75,7 +78,7 @@ public class Main {
 			oos.writeObject(shallow);
 			byte[] arr = baos.toByteArray();
 			sender.send(arr);
-			String[] response = reader.getResponse().getMessage();
+			String[] response = reader.getResponse(false).getMessage();
 			if (response.length > 0 && response[0].equals("Вы успешно зашли в систему")) {
 				return true;
 			}
@@ -95,7 +98,7 @@ public class Main {
 			oos.writeObject(shallow);
 			byte[] arr = baos.toByteArray();
 			sender.send(arr);
-			String[] response = reader.getResponse().getMessage();
+			String[] response = reader.getResponse(false).getMessage();
 			if (response.length > 0 && response[0].equals("Вы успешно зашли в систему")) {
 				return true;
 			}
@@ -115,7 +118,7 @@ public class Main {
 			oos.writeObject(shallow);
 			byte[] arr = baos.toByteArray();
 			sender.send(arr);
-			String[] response = reader.getResponse().getMessage(); 
+			String[] response = reader.getResponse(false).getMessage(); 
 			String[][] ans = new String[response.length][11];
 			for (int i = 0; i < response.length; ++i) {
 				String[] spl = response[i].split(";");
@@ -131,7 +134,7 @@ public class Main {
 				return true;
 			}
 			return false;*/
-			System.out.println(response[response.length-1]);
+			System.out.println(response.length);
 			return ans;
 		}
 		catch (Exception e) {
@@ -149,7 +152,7 @@ public class Main {
 			oos.writeObject(shallow);
 			byte[] arr = baos.toByteArray();
 			sender.send(arr);
-			String[] response = reader.getResponse().getMessage();
+			String[] response = reader.getResponse(false).getMessage();
 			String resp = "";
 			for (int i = 0; i < response.length; ++i) {
 				resp += response[i];
@@ -169,7 +172,7 @@ public class Main {
 			oos.writeObject(shallow);
 			byte[] arr = baos.toByteArray();
 			sender.send(arr);
-			String[] response = reader.getResponse().getMessage();
+			String[] response = reader.getResponse(false).getMessage();
 			return true;
 		}
 		catch (Exception e) {
@@ -186,7 +189,7 @@ public class Main {
 				oos.writeObject(shallow);
 				byte[] arr = baos.toByteArray();
 				sender.send(arr);
-				String[] response = reader.getResponse().getMessage();
+				String[] response = reader.getResponse(false).getMessage();
 				System.out.println(response[0]);
 			}
 			for (int i = 0; i < params.length; ++i) {
@@ -196,7 +199,7 @@ public class Main {
                                 oos.writeObject(shallow);
                                 byte[] arr = baos.toByteArray();
                                 sender.send(arr);
-                                String[] response = reader.getResponse().getMessage();
+                                String[] response = reader.getResponse(false).getMessage();
                                 System.out.println(response[0]);
 			}
 			return true;
@@ -204,5 +207,14 @@ public class Main {
 		catch (Exception e) {
 			return false;
 		}
+	}
+
+	public static boolean getMsg() {
+		String[] response = reader.getResponse(true).getMessage();
+		System.out.println("Got response!");
+		for (String r : response) {
+			System.out.println(r);
+		}
+		return true;
 	}
 }

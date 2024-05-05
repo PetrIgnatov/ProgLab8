@@ -20,7 +20,9 @@ jint jvmConnector::connect(char** optionsStrs, int optionsNum) {
 	vm_args.ignoreUnrecognized = false;
 	jint rc = JNI_CreateJavaVM(&jvm, (void**)&env, &vm_args);
 	delete options;
+	std::cout << "Options deleted!\n";
 	mainClass = env->FindClass("ru/se/ifmo/prog/lab8/client/back/Main");
+	std::cout << "Finding class\n";
 	if (mainClass == 0) {
 		std::cout << "Error finding class!";
 		exit(EXIT_FAILURE);

@@ -16,6 +16,8 @@
 #include <QScrollArea>
 #include "dragonField.h"
 #include "commandWindow.h"
+#include <QTimer> 
+#include <QScrollBar>
 
 mainPage::mainPage(QWidget* parent, JNIEnv* env, jclass* cl, QString loginArg, QString passwordArg) : QWidget(parent) {
 	jnienv = env;
@@ -29,7 +31,18 @@ mainPage::mainPage(QWidget* parent, JNIEnv* env, jclass* cl, QString loginArg, Q
 	backgroundPal.setColor(QPalette::Window, Qt::white);
 	this->setAutoFillBackground(true);
 	this->setPalette(backgroundPal);
+	timer = new QTimer();
+	timer->setInterval(1000);
+	QObject::connect(timer, &QTimer::timeout, this, &mainPage::drawGui);
+	timer->start();
+	vscroll = 0;
+	hscroll = 0;
+	firstUpdate = true;
 	drawGui();
+}
+
+void mainPage::checkUpd() {
+	std::cout << "UPDATE!\n";
 }
 
 void mainPage::paintEvent(QPaintEvent* e) {
@@ -76,25 +89,58 @@ void mainPage::changeDragon(QString num, int n) {
 
 void mainPage::drawGui() {
 	std::cout << "Drawing gui\n";
-	for (int i = 0; i < dragCount; ++i) {
-		delete[] dragon[i];
+	/*if (area != NULL && area != nullptr) {
+		vscroll = area->verticalScrollBar()->value();
+		hscroll = area->horizontalScrollBar()->value();
+	}*/
+	if (!firstUpdate) {
+		std::cout << vscroll << " " << hscroll << "\n";
+		vscroll = area->verticalScrollBar()->value();
+		hscroll = area->horizontalScrollBar()->value();
+		for (int i = 0; i < dragCount; ++i) {
+			for (int j = 0; j < 13; ++j) {
+				delete dragon[i][j];
+			}
+			delete[] dragon[i];
+		}
+		delete grid;
+		delete viewport;
 	}
-	delete vbox;
-	delete viewport;
-	vbox = new QVBoxLayout(this);
-	hbox = new QHBoxLayout();
-	tryComs = new QPushButton("TRY COMMANDS");
-	tryComs->setStyleSheet("color: white; background: #00ba18; border: none; font-size: 40px");
-	QObject::connect(tryComs, &QPushButton::clicked, this, &mainPage::openComW);
-	exit = new QPushButton("EXIT");
-	exit->setStyleSheet("color: white; background: #F00000; border: none; font-size: 40px");
-	refresh = new QPushButton("REFRESH");
-	refresh->setStyleSheet("color: white; background: #0B00DA; border: none; font-size: 40px");
-	QObject::connect(refresh, &QPushButton::clicked, this, &mainPage::drawGui);
-	username = new QLabel(loginStr);
+	else {
+		vbox = new QVBoxLayout(this);
+		hbox = new QHBoxLayout();
+		tryComs = new QPushButton("TRY COMMANDS");
+		tryComs->setStyleSheet("color: white; background: #00ba18; border: none; font-size: 40px");
+		QObject::connect(tryComs, &QPushButton::clicked, this, &mainPage::openComW);
+		exit = new QPushButton("EXIT");
+		exit->setStyleSheet("color: white; background: #F00000; border: none; font-size: 40px");
+		refresh = new QPushButton("REFRESH");
+		refresh->setStyleSheet("color: white; background: #0B00DA; border: none; font-size: 40px");
+		QObject::connect(refresh, &QPushButton::clicked, this, &mainPage::drawGui);
+		username = new QLabel(loginStr);
+
+		mainhbox = new QHBoxLayout();
+		area = new QScrollArea();
+		dragonfield = new dragonField();
+		hscroll = 0;
+		vscroll = 0;
+		hbox->addStretch();
+		hbox->addWidget(tryComs);
+		hbox->addWidget(refresh);
+		hbox->addWidget(exit);
+		hbox->addWidget(username);
+		vbox->addLayout(hbox);
+		vbox->addSpacing(50);
+		//Тут поменял
+		mainhbox->addWidget(area);
+		mainhbox->addWidget(dragonfield);
+		vbox->addLayout(mainhbox);
+		firstUpdate = false;
+	}
+	std::cout << "Memory cleared\n";
 	grid = new QGridLayout();
-	mainhbox = new QHBoxLayout();
-	area = new QScrollArea();
+	viewport = new QWidget;
+	std::cout << "Reinitialized\n";
 	QLabel** header = new QLabel*[11];
 	header[0] = new QLabel("  ID  ");
 	header[1] = new QLabel("  NAME  ");
@@ -109,6 +155,7 @@ void mainPage::drawGui() {
 	header[10] = new QLabel("  NUMBER OF TREASURES  ");
 	for (int i = 0; i < 11; ++i) {
 		header[i]->setStyleSheet("color: white; background: black; border: none; font-size: 12px");
+		std::cout << "Adding to grid\n";
 		grid->addWidget(header[i], 0, i);
 	}
 	jmethodID method = jnienv->GetStaticMethodID(*jcl, "getDragons", "(Ljava/lang/String;Ljava/lang/String;)[[Ljava/lang/String;");
@@ -116,24 +163,18 @@ void mainPage::drawGui() {
 		std::cout << "Error!";
 		return;
 	}
-	std::cout << "Getting dragons\n";
 	jobjectArray dragons = jobjectArray(jnienv->CallStaticObjectMethod(*jcl, method, jnienv->NewStringUTF("show"), QStr_to_jstr(jnienv, loginStr), QStr_to_jstr(jnienv, passwordStr)));
-	std::cout << "1\n";
 	if (dragons == NULL) {
 		dragCount = 0;
 	}
 	else {
 		dragCount = jnienv->GetArrayLength(dragons);
 	}
-	std::cout << "2\n";
 	dragon = new QWidget**[dragCount]; 
-	std::cout << "3\n";
 	for (int i = 0; i < dragCount; ++i) {
-		std::cout << i << " i\n";
 		dragon[i] = new QWidget*[13];
 		jobjectArray curDr = jobjectArray(jnienv->GetObjectArrayElement(dragons, i));
 		for (int j = 0; j < 13; ++j) {
-			std::cout << j << " j\n";
 			switch (j) {
 				case 0:
 					dragon[i][j] = new QLabel(jnienv->GetStringUTFChars(jstring(jnienv->GetObjectArrayElement(curDr, j)), nullptr));
@@ -156,28 +197,19 @@ void mainPage::drawGui() {
 					dragon[i][j]->setStyleSheet("color: black; background: transparent; border: none; font-size: 12px");
 					break;
 			}
+			std::cout << "Adding dragons to grid\n";
 			grid->addWidget(dragon[i][j], i+1, j);
 		}
+		std::cout << "Dragon added!\n";
 		QString id = ((QLabel*)(dragon[i][0]))->text();
 		QObject::connect((QPushButton*)(dragon[i][11]), &QPushButton::clicked, this, [id, i, this](){changeDragon(id, i);});
 		QObject::connect((QPushButton*)(dragon[i][12]), &QPushButton::clicked, this, [id, this](){deleteDragon(id);});
 	}
-	std::cout << "Dragons found\n";
-	dragonField* dragonfield = new dragonField();
-	viewport = new QWidget;
-	hbox->addStretch();
-	hbox->addWidget(tryComs);
-	hbox->addWidget(refresh);
-	hbox->addWidget(exit);
-	hbox->addWidget(username);
-	vbox->addLayout(hbox);
-	vbox->addSpacing(50);
+	std::cout << "Adding grid to viewport\n";
 	viewport->setLayout(grid);
 	area->setWidget(viewport);
-	mainhbox->addWidget(area);
-	mainhbox->addWidget(dragonfield);
-	vbox->addLayout(mainhbox);
-	std::cout << "GUI MADE!\n";
+	area->verticalScrollBar()->setValue(vscroll);
+	area->horizontalScrollBar()->setValue(hscroll);
 }
 
 void mainPage::openComW() {
@@ -203,4 +235,6 @@ void mainPage::destroy() {
 	delete area;
 	delete mainhbox;
 	delete vbox;
+	delete timer;
+	std::cout << "Everything disappeared\n";
 }

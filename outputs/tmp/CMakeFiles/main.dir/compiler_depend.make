@@ -373,7 +373,13 @@ CMakeFiles/main.dir/main.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo
   /usr/include/qt5/QtWidgets/QScrollArea \
   /usr/include/qt5/QtWidgets/qscrollarea.h \
   /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
-  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h
+  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h \
+  /usr/include/qt5/QtCore/QTimer \
+  /usr/include/qt5/QtCore/qtimer.h \
+  /usr/include/qt5/QtCore/qbasictimer.h \
+  /usr/include/c++/12/thread \
+  /usr/include/c++/12/bits/std_thread.h \
+  /usr/include/c++/12/bits/this_thread_sleep.h
 
 CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.o: main_autogen/mocs_compilation.cpp \
   /usr/include/stdc-predef.h
@@ -1115,7 +1121,13 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o: /home/Petrign/Проги/Pro
   /usr/include/qt5/QtWidgets/QScrollArea \
   /usr/include/qt5/QtWidgets/qscrollarea.h \
   /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
-  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h
+  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h \
+  /usr/include/qt5/QtCore/QTimer \
+  /usr/include/qt5/QtCore/qtimer.h \
+  /usr/include/qt5/QtCore/qbasictimer.h \
+  /usr/include/c++/12/thread \
+  /usr/include/c++/12/bits/std_thread.h \
+  /usr/include/c++/12/bits/this_thread_sleep.h
 
 CMakeFiles/main.dir/windows/dragonField.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp \
   /usr/include/stdc-predef.h \
@@ -1807,6 +1819,9 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
   /usr/include/qt5/QtWidgets/qscrollarea.h \
   /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h \
+  /usr/include/qt5/QtCore/QTimer \
+  /usr/include/qt5/QtCore/qtimer.h \
+  /usr/include/qt5/QtCore/qbasictimer.h \
   /usr/include/c++/12/iostream \
   /usr/include/c++/12/ostream \
   /usr/include/c++/12/ios \
@@ -1835,8 +1850,13 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
   /usr/include/qt5/QtWidgets/QTextEdit \
   /usr/include/qt5/QtWidgets/qtextedit.h \
   /usr/include/qt5/QtGui/qtextdocument.h \
-  /usr/include/qt5/QtCore/qurl.h
+  /usr/include/qt5/QtCore/qurl.h \
+  /usr/include/qt5/QtWidgets/QScrollBar \
+  /usr/include/qt5/QtWidgets/qscrollbar.h \
+  /usr/include/qt5/QtWidgets/qabstractslider.h
 
+
+/usr/include/qt5/QtWidgets/QScrollBar:
 
 /usr/include/qt5/QtGui/qpainter.h:
 
@@ -1847,6 +1867,12 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.h:
 
 /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.cpp:
+
+/usr/include/c++/12/bits/this_thread_sleep.h:
+
+/usr/include/qt5/QtCore/qbasictimer.h:
+
+/usr/include/qt5/QtCore/QTimer:
 
 /usr/include/qt5/QtWidgets/QHBoxLayout:
 
@@ -1942,6 +1968,8 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 
 /usr/include/qt5/QtGui/qpalette.h:
 
+/usr/include/qt5/QtCore/qtimer.h:
+
 /usr/include/qt5/QtGui/qfontinfo.h:
 
 /usr/include/qt5/QtCore/qsize.h:
@@ -1969,6 +1997,8 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 /usr/include/c++/12/bits/stl_map.h:
 
 /usr/include/qt5/QtCore/qcontainerfwd.h:
+
+/usr/include/qt5/QtWidgets/qabstractslider.h:
 
 /usr/include/qt5/QtCore/qvarlengtharray.h:
 
@@ -2141,6 +2171,8 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 /usr/include/bits/types/struct_sched_param.h:
 
 /usr/include/c++/12/cwchar:
+
+/usr/include/qt5/QtWidgets/qscrollbar.h:
 
 /usr/include/c++/12/ext/atomicity.h:
 
@@ -2434,6 +2466,8 @@ main_autogen/mocs_compilation.cpp:
 
 /usr/include/qt5/QtCore/qstringview.h:
 
+/usr/include/c++/12/thread:
+
 /usr/include/c++/12/bits/cpp_type_traits.h:
 
 /usr/include/bits/select.h:
@@ -2505,6 +2539,8 @@ main_autogen/mocs_compilation.cpp:
 /usr/include/c++/12/bits/basic_ios.tcc:
 
 /usr/lib/jvm/java/include/jni.h:
+
+/usr/include/c++/12/bits/std_thread.h:
 
 /usr/include/qt5/QtWidgets/QWidget:
 

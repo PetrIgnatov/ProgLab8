@@ -262,4 +262,8 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/qt5/QtWidgets/QScrollArea \
  /usr/include/qt5/QtWidgets/qscrollarea.h \
  /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
- /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h \
+ /usr/include/qt5/QtCore/QTimer /usr/include/qt5/QtCore/qtimer.h \
+ /usr/include/qt5/QtCore/qbasictimer.h /usr/include/c++/12/thread \
+ /usr/include/c++/12/bits/std_thread.h \
+ /usr/include/c++/12/bits/this_thread_sleep.h

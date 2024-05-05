@@ -239,8 +239,10 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: \
  /usr/include/qt5/QtWidgets/qscrollarea.h \
  /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h \
- /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
- /usr/include/c++/12/ios /usr/include/c++/12/bits/basic_ios.h \
+ /usr/include/qt5/QtCore/QTimer /usr/include/qt5/QtCore/qtimer.h \
+ /usr/include/qt5/QtCore/qbasictimer.h /usr/include/c++/12/iostream \
+ /usr/include/c++/12/ostream /usr/include/c++/12/ios \
+ /usr/include/c++/12/bits/basic_ios.h \
  /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
  /usr/include/wctype.h /usr/include/bits/wctype-wchar.h \
  /usr/include/c++/12/x86_64-redhat-linux/bits/ctype_base.h \
@@ -257,4 +259,7 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.h \
  /usr/include/qt5/QtWidgets/QTextEdit \
  /usr/include/qt5/QtWidgets/qtextedit.h \
- /usr/include/qt5/QtGui/qtextdocument.h /usr/include/qt5/QtCore/qurl.h
+ /usr/include/qt5/QtGui/qtextdocument.h /usr/include/qt5/QtCore/qurl.h \
+ /usr/include/qt5/QtWidgets/QScrollBar \
+ /usr/include/qt5/QtWidgets/qscrollbar.h \
+ /usr/include/qt5/QtWidgets/qabstractslider.h
