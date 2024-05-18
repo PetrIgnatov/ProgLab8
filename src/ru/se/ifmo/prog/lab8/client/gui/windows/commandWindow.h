@@ -10,6 +10,7 @@
 #include <string>
 #include <QTextEdit>
 #include "mainPage.h"
+#include <QKeyEvent>
 
 class mainPage;
 
@@ -19,6 +20,7 @@ class commandWindow : public QWidget {
 	protected:
 		void paintEvent(QPaintEvent* event);
 		void closeEvent(QCloseEvent* event);
+		void keyPressEvent(QKeyEvent* event);
 	private:
 		QString loginStr;
 		QString passwordStr;

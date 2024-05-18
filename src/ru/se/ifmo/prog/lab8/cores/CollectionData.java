@@ -11,6 +11,7 @@ import java.util.Locale;
 import java.util.Collections;
 import ru.se.ifmo.prog.lab8.exceptions.*;
 import java.util.concurrent.locks.ReentrantLock;
+import java.text.DateFormat;
 
 public class CollectionData {
 	private LinkedList<Dragon> dragons;
@@ -92,9 +93,10 @@ public class CollectionData {
 						default:
 							throw new ConvertationException("Ошибка! Неизвестный характер \"" + splitted[8] + "\"");
 					}
+					System.out.println(splitted[4]);
 					String format = "yyyy-MM-dd HH:mm:ss";
-					DateTimeFormatter formater = DateTimeFormatter.ofPattern(format);
-					LocalDateTime date = LocalDateTime.parse(splitted[4], formater);
+					DateFormat formater = new SimpleDateFormat(format);
+					Date date = formater.parse(splitted[4]);
 					maxId = Math.max(maxId, Integer.parseInt(splitted[0]));
 					for (int i = 0; i < dragons.size(); ++i) {
 						if (Integer.parseInt(splitted[0]) == dragons.get(i).getId()) {
@@ -188,9 +190,10 @@ public class CollectionData {
 						default:
 							throw new ConvertationException("Ошибка! Неизвестный характер \"" + splitted[8] + "\"");
 					}
+					System.out.println(splitted[0]);
 					String format = "yyyy-MM-dd HH:mm:ss";
-					DateTimeFormatter formater = DateTimeFormatter.ofPattern(format);
-					LocalDateTime date = LocalDateTime.parse(splitted[4], formater);
+					DateFormat formater = new SimpleDateFormat(format);
+					Date date = formater.parse(splitted[4]);
 					maxId = Math.max(maxId, Integer.parseInt(splitted[0]));
 					for (int i = 0; i < dragons.size(); ++i) {
 						if (Integer.parseInt(splitted[0]) == dragons.get(i).getId()) {
@@ -306,7 +309,7 @@ public class CollectionData {
 					splitted[0].equals("") ? null : splitted[0],
 					splitted[1].equals("") ? null : Integer.parseInt(splitted[1]),
 					splitted[2].equals("") ? null : Float.parseFloat(splitted[2]),
-					date,
+					new Date(),
 					splitted[3].equals("") ? null : Integer.parseInt(splitted[3]),
 					col,type,character,
 					splitted[7].equals("") ? null : Double.parseDouble(splitted[7]),
@@ -330,7 +333,7 @@ public class CollectionData {
 	public void add(Dragon dragon) {
 		if (dragon != null) {
 			dragon.setId(++maxId);
-			dragon.setDate(LocalDateTime.now());
+			dragon.setDate(new Date());
 			dragons.add(dragon);
 		}
 	}
@@ -361,7 +364,7 @@ public class CollectionData {
 			if (!dragon.equals(null)) {
 				if (login.equals(dragons.get(ind).getOwner())) {
 					dragon.setId(id);
-					dragon.setDate(LocalDateTime.now());
+					dragon.setDate(dragons.get(ind).getDate());
 					System.out.println(dragon.toString());
 					dragons.set(ind, dragon);
 					return new String[0];

@@ -51,7 +51,7 @@ public class Main {
 	}
 	/*public static void main() {
 		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-			System.out.println("\nВыключаем клиент");
+			// System.out.println("\nВыключаем клиент");
 			}));
 		CommandManager commandmanager = new CommandManager();
 		UDPConnector connector = new UDPConnector();
@@ -62,12 +62,12 @@ public class Main {
 			console.start(connector, false, null);
 		}
 		catch (Exception e) {
-			System.out.println(e.getMessage());
-			System.out.println("Фатальная ошибка! Дайте программисту по горбу");
+			// System.out.println(e.getMessage());
+			// System.out.println("Фатальная ошибка! Дайте программисту по горбу");
 		}
 	}*/
 	public static void main(String[] args) {
-		System.out.println("Hello");
+		// System.out.println("Hello");
 	}
 
 	public static String[] getConnectionText() {
@@ -100,7 +100,7 @@ public class Main {
 			iPort = Integer.parseInt(port);
 		}
 		catch (Exception e) {
-			System.out.println("Ошибка! Порт должен быть числом");
+			// System.out.println("Ошибка! Порт должен быть числом");
 			return false;
 		}
                 connector.connect(host, iPort);
@@ -120,7 +120,7 @@ public class Main {
 			return false;
 		}
 		catch (Exception e) {
-			System.out.println(e.getMessage());
+			// System.out.println(e.getMessage());
 			return false;
 		}
 	}
@@ -140,7 +140,7 @@ public class Main {
 			return false;
 		}
 		catch (Exception e) {
-			System.out.println(e.getMessage());
+			// System.out.println(e.getMessage());
 			return false;
 		}
 	}
@@ -160,13 +160,14 @@ public class Main {
 			return false;
 		}
 		catch (Exception e) {
-			System.out.println(e.getMessage());
+			// System.out.println(e.getMessage());
 			return false;
 		}
 	}
 
 	public static String[][] getAllDragons(String login, String password) {
 		try {
+//			System.out.println("GETTING ALL DRAGONS");
 			StringShallow shallow = new StringShallow(new String[]{"show"}, login, password);
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(baos);
@@ -174,10 +175,13 @@ public class Main {
 			byte[] arr = baos.toByteArray();
 			sender.send(arr);
 			String[] response = reader.getResponse(false).getMessage(); 
+//			System.out.println("Got response");
 			NumberFormat nf = NumberFormat.getNumberInstance();
-			DateFormat to = DateFormat.getDateInstance(DateFormat.FULL);
+			DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);
 			String[][] ans = new String[response.length][12];
+//			System.out.println("Going to for");
 			for (int i = 0; i < response.length; ++i) {
+//				System.out.println("i = " + i);
 				String[] spl = response[i].split(";");
 				if (spl.length != 12) {
 					return null;
@@ -185,21 +189,32 @@ public class Main {
 				for (int j = 0; j < 12; ++j) {
 					ans[i][j] = spl[j];
 				}
+//				System.out.println("Going to parse");
 			       	ans[i][0] = nf.format(Integer.parseInt(ans[i][0]));
 				ans[i][2] = nf.format(Integer.parseInt(ans[i][2]));
 				ans[i][3] = nf.format(Float.parseFloat(ans[i][3]));
-				ans[i][4] = LocalDateTime.parse(ans[i][4]).atZone(
+				String format = "EEE MMM dd HH:mm:ss zzz yyyy";
+                                DateFormat formater = new SimpleDateFormat(format, Locale.ENGLISH);
+                                Date date = formater.parse(ans[i][4]);
+//				System.out.println("Date parsed");
+				ans[i][4] = df.format(date);
+				ans[i][5] = nf.format(Integer.parseInt(ans[i][5]));
+				ans[i][9] = nf.format(Double.parseDouble(ans[i][9]));
+				ans[i][10] = nf.format(Float.parseFloat(ans[i][10]));
+//				System.out.println("Everything parsed");
+
 			}
+//			System.out.println("TOTAL DRAGONS SIZE " + response.length);
 			/*
 			if (response.length > 0 && response[0].equals("Вы успешно зашли в систему")) {
 				return true;
 			}
 			return false;*/
-			System.out.println(response.length);
+			// System.out.println(response.length);
 			return ans;
 		}
 		catch (Exception e) {
-			System.out.println(e.getMessage());
+			// System.out.println(e.getMessage());
 			return null;
 		}
 	}
@@ -212,6 +227,8 @@ public class Main {
 			oos.writeObject(shallow);
 			byte[] arr = baos.toByteArray();
 			sender.send(arr);
+			NumberFormat nf = NumberFormat.getNumberInstance(loc);
+                        DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, loc);
 			String[] response = reader.getResponse(false).getMessage(); 
 			String[][] ans = new String[response.length][12];
 			for (int i = 0; i < response.length; ++i) {
@@ -222,29 +239,39 @@ public class Main {
 				for (int j = 0; j < 12; ++j) {
 					ans[i][j] = spl[j];
 				}
+				ans[i][0] = nf.format(Integer.parseInt(ans[i][0]));
+				ans[i][2] = nf.format(Integer.parseInt(ans[i][2]));
+				ans[i][3] = nf.format(Float.parseFloat(ans[i][3]));
+				String format = "EEE MMM dd HH:mm:ss zzz yyyy";
+	                        DateFormat formater = new SimpleDateFormat(format, Locale.ENGLISH);
+        	                Date date = formater.parse(ans[i][4]);
+				ans[i][4] = df.format(date);
+				ans[i][5] = nf.format(Integer.parseInt(ans[i][5]));
+				ans[i][9] = nf.format(Double.parseDouble(ans[i][9]));
+				ans[i][10] = nf.format(Float.parseFloat(ans[i][10]));
 			}
 			/*
 			if (response.length > 0 && response[0].equals("Вы успешно зашли в систему")) {
 				return true;
 			}
 			return false;*/
-			System.out.println(response.length);
+			// System.out.println(response.length);
 			String[][] res = Arrays.stream(ans).sorted((row1, row2) -> row1[sortField].compareTo(row2[sortField])).filter(row -> {
-				System.out.println("Columns count " + row.length);
+				// System.out.println("Columns count " + row.length);
 				for (int i = 0; i < Math.min(row.length, 11); ++i) {
-					System.out.println("Column " + i + " " + row[i]);
+					// System.out.println("Column " + i + " " + row[i]);
 					if (filter.get(i).size() == 0) {
 						continue;
 					}
 					if (!filter.get(i).contains(row[i])) {
 						for (String s: filter.get(i)) {
-							System.out.println("Filter " + s);
+							// System.out.println("Filter " + s);
 						}
-						System.out.println("Failed to find " + row[i]);
+						// System.out.println("Failed to find " + row[i]);
 						return false;
 					}
 					else {
-						System.out.println("Checked " + i + " " + row[i]);
+						// System.out.println("Checked " + i + " " + row[i]);
 					}
 				}
 				return true;
@@ -252,14 +279,14 @@ public class Main {
 			/*
 			for (int i = 0; i < res.length; ++i) {
 				for (int j = 0; j < res[i].length; ++j) {
-					System.out.println(res[i][j]);
+					// System.out.println(res[i][j]);
 				}
 			}
 			*/
 			return res;
 		}
 		catch (Exception e) {
-			System.out.println(e.getMessage());
+			// System.out.println(e.getMessage());
 			return null;
 		}
 	}
@@ -270,7 +297,7 @@ public class Main {
 
 	public static String sendCommand(String com, String login, String password) {
 		try {
-			System.out.println("Sending command");
+			// System.out.println("Sending command");
 			StringShallow shallow = new StringShallow(com.split(" "), login, password);
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(baos);
@@ -291,7 +318,7 @@ public class Main {
 
 	public static boolean remove(String id, String login, String password) {
 		try {
-			System.out.println(id);
+			// System.out.println(id);
 			StringShallow shallow = new StringShallow(new String[]{"remove_by_id", id}, login, password);
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(baos);
@@ -300,7 +327,7 @@ public class Main {
 			sender.send(arr);
 			String[] response = reader.getResponse(false).getMessage();
 			if (response.length > 0) {
-				System.out.println(response[0]);
+				// System.out.println(response[0]);
 			}
 			if (response.length == 1 && response[0].equals("Вы не можете удалить не своего дракона")) {
 				return false;
@@ -322,10 +349,10 @@ public class Main {
 				byte[] arr = baos.toByteArray();
 				sender.send(arr);
 				String[] response = reader.getResponse(false).getMessage();
-				System.out.println(response[0]);
+				// System.out.println(response[0]);
 			}
 			for (int i = 0; i < params.length; ++i) {
-				System.out.println(params[i]);
+				// System.out.println(params[i]);
 				StringShallow shallow = new StringShallow(new String[]{params[i]}, login, password);
                                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                                 ObjectOutputStream oos = new ObjectOutputStream(baos);
@@ -334,16 +361,16 @@ public class Main {
                                 sender.send(arr);
                                 String[] response = reader.getResponse(false).getMessage();
                                 if (response.length == 1 && (response[0].equals("Неправильный аргумент, попробуйте снова") || response[0].equals("Вы не можете менять не своего дракона"))) {
-					System.out.println("RETURNING FALSE");
+					// System.out.println("RETURNING FALSE");
 					return false;
 				}
 			}
-			System.out.println("VSE IDET PO PLANU");
+			// System.out.println("VSE IDET PO PLANU");
 			return true;
 		}
 		catch (Exception e) {
-			System.out.println(e.getMessage());
-			System.out.println("VSE LETIT V PIZDU");
+			// System.out.println(e.getMessage());
+			// System.out.println("VSE LETIT V PIZDU");
 			return false;
 		}
 	}
@@ -358,7 +385,7 @@ public class Main {
 				byte[] arr = baos.toByteArray();
 				sender.send(arr);
 				String[] response = reader.getResponse(false).getMessage();
-				System.out.println(response[0]);
+				// System.out.println(response[0]);
 			}
 			for (int i = 0; i < params.length; ++i) {
 				StringShallow shallow = new StringShallow(new String[]{params[i]}, login, password);
@@ -368,7 +395,12 @@ public class Main {
                                 byte[] arr = baos.toByteArray();
                                 sender.send(arr);
                                 String[] response = reader.getResponse(false).getMessage();
-                                System.out.println(response[0]);
+				if (response.length == 1 && (response[0].equals("Неправильный аргумент, попробуйте снова") || response[0].equals("Вы не можете менять не своего дракона"))) {
+                                        // System.out.println("RETURNING FALSE");
+                                        return false;
+                                }
+
+                                // System.out.println(response[0]);
 			}
 			return true;
 		}
@@ -379,18 +411,18 @@ public class Main {
 
 	public static boolean getMsg() {
 		String[] response = reader.getResponse(true).getMessage();
-		System.out.println("Got response!");
+		// System.out.println("Got response!");
 		for (String r : response) {
-			System.out.println(r);
+			// System.out.println(r);
 		}
 		return true;
 	}
 
 	public static boolean setFilter(int n, String[] newFilter) {
-		System.out.println("Filter by " + n);
+		// System.out.println("Filter by " + n);
 		filter.set(n, new HashSet<String>());
 		for (String s: newFilter) {
-			System.out.println("Java filter " + s);
+			// System.out.println("Java filter " + s);
 			filter.get(n).add(s);
 		}
 		return true;

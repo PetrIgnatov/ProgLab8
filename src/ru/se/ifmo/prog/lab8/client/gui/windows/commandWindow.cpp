@@ -13,6 +13,7 @@
 #include <QColor>
 #include <QTextEdit>
 #include "mainPage.h"
+#include <QKeyEvent>
 
 commandWindow::commandWindow(QWidget* parent, JNIEnv* env, jclass* cl, QString login, QString password, QString* txt, bool* lock, mainPage* mp) : QWidget(parent) {
 	jnienv = env;
@@ -77,6 +78,12 @@ void commandWindow::drawBackground() {
 	painter.drawPolygon(new QPointF[] {QPointF(190, 12), QPointF(210, 5), QPointF(350, 480), QPointF(330, 487)}, 4);
 }
 
+void commandWindow::keyPressEvent(QKeyEvent* event) {
+	if (event->key() == Qt::Key_Enter || event->key() == Qt::Key_Return) {
+		onBtnClick();
+	}
+}
+
 void commandWindow::onBtnClick() {
 	jmethodID method = jnienv->GetStaticMethodID(*jcl, "sendCommand", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
 	if (method == 0) {
@@ -102,5 +109,8 @@ void commandWindow::onBtnClick() {
 			}
 		}
 		mainpage->changeUser(l, p);
+	}
+	else if (rsp == "exit") {
+		mainpage->destroy();
 	}
 }

@@ -43,7 +43,7 @@ public class UDPReader {
 					ByteArrayInputStream bis = new ByteArrayInputStream(arr);
 					ObjectInput in = new ObjectInputStream(bis);
 					Response response = (Response)in.readObject();	
-					System.out.println("Got info!");
+					//System.out.println("Got info!");
 					return response;
 				}
 				catch (StreamCorruptedException e) {

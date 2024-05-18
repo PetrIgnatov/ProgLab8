@@ -270,6 +270,10 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/qt5/QtWidgets/QTextEdit \
  /usr/include/qt5/QtWidgets/qtextedit.h \
  /usr/include/qt5/QtGui/qtextdocument.h /usr/include/qt5/QtCore/qurl.h \
+ /usr/include/qt5/QtGui/QKeyEvent /usr/include/qt5/QtGui/qevent.h \
+ /usr/include/qt5/QtCore/qset.h /usr/include/qt5/QtCore/qfile.h \
+ /usr/include/qt5/QtCore/qfiledevice.h /usr/include/qt5/QtGui/qvector2d.h \
+ /usr/include/qt5/QtGui/qtouchdevice.h \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
  /usr/include/qt5/QtCore/QString /usr/include/qt5/QtCore/qstring.h \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.h \

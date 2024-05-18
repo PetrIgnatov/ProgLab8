@@ -18,12 +18,12 @@
 void connectionWindow::getMsg() {
 	/*jmethodID method = jnienv->GetStaticMethodID(*jcl, "getMsg", "()V");
 	if (method == 0) {
-		std::cout << "Error!";
+		// std::cout << "Error!";
 		return;
 	}	
 	jnienv->CallStaticVoidMethod(*jcl, method);*/
 	while(true) {
-		std::cout << "Ok\n";
+		// std::cout << "Ok\n";
 	}
 }
 
@@ -157,7 +157,7 @@ void connectionWindow::setText() {
 void connectionWindow::onConClick() {
 	jmethodID method = jnienv->GetStaticMethodID(*jcl, "connect", "(Ljava/lang/String;Ljava/lang/String;)Z");
 	if (method == 0) {
-		std::cout << "Error!";
+		// std::cout << "Error!";
 		return;
 	}	
 	jboolean connected = jnienv->CallStaticBooleanMethod(*jcl, method, QStr_to_jstr(jnienv, hostIn->text()), QStr_to_jstr(jnienv, portIn->text()));
@@ -236,17 +236,17 @@ void connectionWindow::createAnother() {
 }
 
 void connectionWindow::destroy() {
-	std::cout << "Destroying connection window\n";
+	// std::cout << "Destroying connection window\n";
 	if (host != nullptr) {
-		std::cout << "Deleting host\n";
+		// std::cout << "Deleting host\n";
 		delete host;
-		std::cout << "Deleting hostin\n";
+		// std::cout << "Deleting hostin\n";
 		delete hostIn;
-		std::cout << "Deleting port\n";
+		// std::cout << "Deleting port\n";
 		delete port;
-		std::cout << "Deleting portin\n";
+		// std::cout << "Deleting portin\n";
 		delete portIn;
-		std::cout << "Deleting confirm\n";
+		// std::cout << "Deleting confirm\n";
 		delete confirm;
 	}
 	for (int i = 0; i < 4; ++i) {
@@ -254,7 +254,7 @@ void connectionWindow::destroy() {
 	}
 	delete[] langBtn;
 	delete langBox;
-	std::cout << "Deleted 1\n";
+	// std::cout << "Deleted 1\n";
 	delete error;
 		delete login;
 		delete password;
@@ -266,5 +266,5 @@ void connectionWindow::destroy() {
 	delete grid;
 	delete vbox;
 	delete[] txt;
-	std::cout << "Everything gone\n";
+	// std::cout << "Everything gone\n";
 }

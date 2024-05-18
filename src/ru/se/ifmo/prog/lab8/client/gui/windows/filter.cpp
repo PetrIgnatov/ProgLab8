@@ -37,7 +37,7 @@ filter::filter(QWidget* parent, std::set<jstring>* values, int col, QString titl
 	titleLabel->setStyleSheet("color: black");
 	vbox = new QVBoxLayout(this);
 	save = new QPushButton(txt[5]);
-	scrollable = new QVBoxLayout(this);
+	scrollable = new QVBoxLayout();
 	area = new QScrollArea();
 	viewport = new QWidget();
 	QObject::connect(save, &QPushButton::clicked, this, &filter::changeFilter);
@@ -47,7 +47,7 @@ filter::filter(QWidget* parent, std::set<jstring>* values, int col, QString titl
 		checkbox[i] = new QCheckBox(jnienv->GetStringUTFChars(*it, nullptr));
 		checkbox[i]->setStyleSheet("color: black");
 		++it;
-		std::cout << "Adding\n";
+		// std::cout << "Adding\n";
 		scrollable->addWidget(checkbox[i]);
 	}
 	viewport->setLayout(scrollable);
@@ -67,7 +67,7 @@ void filter::closeEvent(QCloseEvent* event) {
 	if (mp != nullptr) {
 		mp->destroyFilter();
 	}
-	std::cout << "Edit window closed\n";
+	// std::cout << "Edit window closed\n";
 }
 
 void filter::paintEvent(QPaintEvent* e) {
@@ -99,7 +99,7 @@ void filter::changeFilter() {
 	int loccount = 0;
 	for (int i = 0; (i < val->size() && it != val->end()); ++i) {
 		if (checkbox[i]->checkState() == Qt::Checked) {
-			std::cout << "FILTER " << jnienv->GetStringUTFChars(*it, nullptr);
+			// std::cout << "FILTER " << jnienv->GetStringUTFChars(*it, nullptr);
 			jnienv->SetObjectArrayElement(filter, loccount, *it);
 			++loccount;
 		}

@@ -87,7 +87,6 @@ void mainPage::initElements() {
 	progress = new QProgressBar();
 	anim = new QPropertyAnimation(progress, "value");
 	addTable = new QPushButton(txt[19]);
-	addField = new QPushButton(txt[19]);
 	langStr = new QString[]{"РУССКИЙ", "ESPANOL", "HRVATSKI", "SLOVENČINA"};
         langBtn = new QPushButton*[4];
 	commandwindow = nullptr;
@@ -98,7 +97,8 @@ void mainPage::initElements() {
         }
 	hbox->addWidget(tryComs);
 	hbox->addWidget(refresh);
-	hbox->addWidget(exit);
+//	hbox->addWidget(exit);
+	hbox->addSpacing(1);
 	hbox->addWidget(username);
 	vbox->addLayout(hbox);
 	vbox->addSpacing(50);
@@ -118,7 +118,7 @@ void mainPage::initElements() {
 }
 
 void mainPage::checkUpd() {
-	std::cout << "UPDATE!\n";
+	// std::cout << "UPDATE!\n";
 }
 
 void mainPage::paintEvent(QPaintEvent* e) {
@@ -164,7 +164,7 @@ void mainPage::changeDragon(QString num, int n) {
 	jobjectArray dr = jnienv->NewObjectArray(9, jnienv->FindClass("java/lang/String"), NULL);
 	srand(time(NULL));
 	for (int i = 0; i < 9; ++i) {
-//		std::cout << ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text().toStdString() << "\n";
+//		// std::cout << ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text().toStdString() << "\n";
 		jstring jstr = QStr_to_jstr(jnienv, ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text());
 		jnienv->SetObjectArrayElement(dr, i, jstr);
 		jnienv->DeleteLocalRef(jstr);
@@ -191,7 +191,7 @@ void mainPage::drawGuiField() {
 	anim->start();
 	if (!firstUpdateField) {
 		for (int i = 0; i < dragCountField; ++i) {
-			std::cout << i << " button deleted\n";
+			// std::cout << i << " button deleted\n";
 			delete dragonBtn[i];
 			delete[] dragonStr[i];
 		}
@@ -202,7 +202,7 @@ void mainPage::drawGuiField() {
 	}
 //	vscroll = area->verticalScrollBar()->value();
 //	hscroll = area->horizontalScrollBar()->value();
-	std::cout << "scroll " << vscroll << " " << hscroll << "\n";
+	// std::cout << "scroll " << vscroll << " " << hscroll << "\n";
 	dragonfield = new dragonField();
 	//addField = new QPushButton("ADD");
 	//QObject::connect(addField, &QPushButton::clicked, this, &mainPage::showCreation);
@@ -223,7 +223,7 @@ void mainPage::drawGuiField() {
 	float ymin = 1e9;
 	float xcoord[dragCountField], ycoord[dragCountField];
 	for (int i = 0; i < dragCountField; ++i) {
-		std::cout << i << " i\n";
+		// std::cout << i << " i\n";
 		jobjectArray curDr = jobjectArray(jnienv->GetObjectArrayElement(dragons, i));
 		int curDrSize = jnienv->GetArrayLength(curDr);
 		dragonStr[i] = new jstring[curDrSize];
@@ -245,13 +245,13 @@ void mainPage::drawGuiField() {
 	ymax += ydiff;
 	ymin -= ydiff;
 	std::string hex[16] = {"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
-	std::cout << "Starting for " << dragCountField << "\n";
+	// std::cout << "Starting for " << dragCountField << "\n";
 	for (int i = 0; i < dragCountField; ++i) {
-		std::cout << "Creating button " << i << "\n";
+		// std::cout << "Creating button " << i << "\n";
 		dragonBtn[i] = new QPushButton("AA", dragonfield);
 		dragonBtn[i]->move(int(xcoord[i]-xmin)*600/(xmax-xmin), 750*int(ymax-ycoord[i])/(ymax-ymin));
 		if (color.find(jnienv->GetStringUTFChars(dragonStr[i][11], nullptr)) == color.end()) {
-			std::cout << jnienv->GetStringUTFChars(dragonStr[i][11], nullptr);
+			// std::cout << jnienv->GetStringUTFChars(dragonStr[i][11], nullptr);
 			int curCol = 0;
 			std::string colStr = "";
 			bool used = true;
@@ -259,11 +259,11 @@ void mainPage::drawGuiField() {
 				colStr = "";
 				curCol = rand()%16777215;
 				for (int cif = 0; cif < 6; ++cif) {
-					std::cout << hex[curCol%16] << " ";
+					// std::cout << hex[curCol%16] << " ";
 					colStr = hex[curCol%16] + colStr;
 					curCol /= 16;
 				}
-				std::cout << colStr << "\n";
+				// std::cout << colStr << "\n";
 				used = false;
 				for (auto c : color) {
 					if (c.second == colStr) {
@@ -288,9 +288,9 @@ void mainPage::drawGuiField() {
 }
 
 void mainPage::drawGuiTable() {
-	std::cout << "Drawing gui\n";
+	// std::cout << "Drawing gui\n";
 	if (!firstUpdate) {
-		std::cout << vscroll << " " << hscroll << "\n";
+		// std::cout << vscroll << " " << hscroll << "\n";
 		vscroll = area->verticalScrollBar()->value();
 		hscroll = area->horizontalScrollBar()->value();
 		for (int i = 0; i < dragCountTable; ++i) {
@@ -300,34 +300,34 @@ void mainPage::drawGuiTable() {
 			delete[] dragon[i];
 		}
 		delete[] dragon;
-		std::cout << "Dragons deleted\n";
+		// std::cout << "Dragons deleted\n";
 		for (int i = 0; i < 11; ++i) {
-			std::cout << i << "\n";
+			// std::cout << i << "\n";
 			delete titleLabel[i];
 			delete sortButton[i];
 			delete filterButton[i];
 		}
-		std::cout << "For finished\n";
+		// std::cout << "For finished\n";
 		delete[] titleLabel;
 		delete[] sortButton;
 		delete[] filterButton;
 		delete addTable;
-		std::cout << "Titles deleted\n";
+		// std::cout << "Titles deleted\n";
 		delete grid;
 		delete viewport;
 	}
 	firstUpdate = false; 
-	std::cout << "Memory cleared\n";
+	// std::cout << "Memory cleared\n";
 	grid = new QGridLayout();
 	viewport = new QWidget;
-	std::cout << "Reinitialized\n";
+	// std::cout << "Reinitialized\n";
 	titleLabel = new QLabel*[11];
 	sortButton = new QPushButton*[11];
 	filterButton = new QPushButton*[11];
 	addTable = new QPushButton(txt[19]);
 	QObject::connect(addTable, &QPushButton::clicked, this, &mainPage::showCreation);
 	for (int i = 0; i < 11; ++i) {
-		std::cout << i << "\n";
+		// std::cout << i << "\n";
 		titleLabel[i] = new QLabel(txt[7+i]);
 		titleLabel[i]->setMinimumWidth(txt[7+i].length()*10+10);
 		titleLabel[i]->setStyleSheet("color: white; background: black; border: none; font-size: 12px");
@@ -343,7 +343,7 @@ void mainPage::drawGuiTable() {
 		titleLayout[i]->addWidget(filterButton[i]);
 		titleViewport[i] = new QWidget();
 		titleViewport[i]->setLayout(titleLayout[i]); */
-		std::cout << "Adding to grid\n";;
+		// std::cout << "Adding to grid\n";;
 		grid->addWidget(titleLabel[i], 0, i*3);
 		grid->addWidget(sortButton[i], 0, i*3+1);
 		grid->addWidget(filterButton[i], 0, i*3+2);
@@ -382,17 +382,17 @@ void mainPage::drawGuiTable() {
 					dragon[i][j]->setStyleSheet("color: black; background: transparent; border: none; font-size: 12px");
 					break;
 			}
-			std::cout << "Adding dragons to grid\n";
+			// std::cout << "Adding dragons to grid\n";
 			grid->addWidget(dragon[i][j], i+1, j*3, 1, 3);
 		}
-		std::cout << "Dragon added!\n";
+		// std::cout << "Dragon added!\n";
 		QString id = ((QLabel*)(dragon[i][0]))->text();
 		QObject::connect((QPushButton*)(dragon[i][11]), &QPushButton::clicked, this, [id, i, this](){changeDragon(id, i);});
 		QObject::connect((QPushButton*)(dragon[i][12]), &QPushButton::clicked, this, [id, this](){deleteDragon(id);});
 	}
 	grid->addWidget(addTable, dragCountTable+1, 0, 1, 39);
-	std::cout << "Adding grid to viewport\n";
-	std::cout << "scroll " << vscroll << " " << hscroll << "\n";
+	// std::cout << "Adding grid to viewport\n";
+	// std::cout << "scroll " << vscroll << " " << hscroll << "\n";
 	viewport->setLayout(grid);
 	area->setWidget(viewport);
 	area->verticalScrollBar()->setValue(vscroll);
@@ -422,7 +422,7 @@ void mainPage::setSort(int field) {
 }
 
 mainPage::~mainPage() {
-	std::cout << "Deleting\n";
+	// std::cout << "Deleting\n";
 }
 
 jobjectArray mainPage::getDragons() {
@@ -440,7 +440,8 @@ jobjectArray mainPage::getAllDragons() {
                 std::cout << "Error!";
                 return NULL;
         }
-        return jobjectArray(jnienv->CallStaticObjectMethod(*jcl, method, jnienv->NewStringUTF("show"), QStr_to_jstr(jnienv, loginStr), QStr_to_jstr(jnienv, passwordStr)));
+//	std::cout << "Got all dragons\n";
+        return jobjectArray(jnienv->CallStaticObjectMethod(*jcl, method,  QStr_to_jstr(jnienv, loginStr), QStr_to_jstr(jnienv, passwordStr)));
 }
 
 void mainPage::getText() {
@@ -472,13 +473,13 @@ void mainPage::setLang(int l) {
 }
 
 void mainPage::setText() {
-	std::cout << "setting text\n";
+	// std::cout << "setting text\n";
 	tryComs->setText(txt[0]);
-	std::cout << "0\n";
+	// std::cout << "0\n";
 	refresh->setText(txt[1]);
-	std::cout << "1\n";
+	// std::cout << "1\n";
 	exit->setText(txt[2]);
-	std::cout << "ifs\n";
+	// std::cout << "ifs\n";
 /*	if (creationwindow != nullptr) {
 		creationwindow->setText(txt);
 	} */
@@ -486,20 +487,20 @@ void mainPage::setText() {
 		delete dragoninfo;
 		dragoninfo = nullptr;
 	}
-	std::cout << "Creation\n";
+	// std::cout << "Creation\n";
 	if (creationwindow != nullptr) {
 		delete creationwindow;
 		creationwindow = nullptr;
 	}
-	std::cout << "Filter\n";
+	// std::cout << "Filter\n";
 	if (filterWindow != nullptr) {
-		std::cout << "Deleting\n";
+		// std::cout << "Deleting\n";
 		delete filterWindow;
 		filterWindow = nullptr;
 	}
-	std::cout << "commandWindow\n";
+	// std::cout << "commandWindow\n";
 	if (commandwindow != nullptr) {
-		std::cout << "Deleting\n";
+		// std::cout << "Deleting\n";
 		delete commandwindow;
 		commandwindow = nullptr;
 		updateLock = false;
@@ -507,17 +508,17 @@ void mainPage::setText() {
 	if (curErr != -1) {
 		error->setText(txt[curErr]);
 	}
-	std::cout << "Fin\n";
+	// std::cout << "Fin\n";
 	/*
 	for (int i = 0; i < 11; ++i) {
-		std::cout << i << "\n";
+		// std::cout << i << "\n";
 		titleLabel[i]->setMinimumWidth(txt[7+i].length()*10+10);
 		titleLabel[i]->setText(txt[7+i]);
 		sortButton[i]->setText(txt[3]);
 		filterButton[i]->setText(txt[4]);
 	}
 	for (int i = 0; i < dragCountTable; ++i) {
-		std::cout << "\n";
+		// std::cout << "\n";
 		((QPushButton*)(dragon[i][11]))->setText(txt[4]);
 		((QPushButton*)(dragon[i][12]))->setText(txt[5]);
 	}
@@ -526,6 +527,13 @@ void mainPage::setText() {
 }
 
 void mainPage::destroy() {
+	for (int i = 0; i < 4; ++i) {
+		delete langBtn[i];
+	}
+	delete[] langBtn;
+	langBtn = nullptr;
+	delete addTable;
+	addTable = nullptr;
 	for (int i = 0; i < dragCountTable; ++i) {
 		for (int j = 0; j < 13; ++j) {
 			delete dragon[i][j];
@@ -537,39 +545,72 @@ void mainPage::destroy() {
 		delete dragonBtn[i];
 	}
 	delete[] dragonStr;
+	dragonStr = nullptr;
 	delete[] dragonBtn;
+	dragonBtn = nullptr;
+	delete dragonfield;
+	dragonfield = nullptr;
+	delete anim;
+	anim = nullptr;
+	delete progress;
+	progress = nullptr;
 	delete[] dragon;
+	dragon = nullptr;
 	for (int i = 0; i < 11; ++i) {
 		delete titleLabel[i];
 		delete sortButton[i];
 		delete filterButton[i];
 	}
-	std::cout << "For finished\n";
+	// std::cout << "For finished\n";
 	delete[] titleLabel;
-	std::cout << "tl\n";
+	titleLabel = nullptr;
+	// std::cout << "tl\n";
 	delete[] sortButton;
-	std::cout << "sb\n";
-	std::cout << "tv\n";
+	sortButton = nullptr;
+	// std::cout << "sb\n";
+	// std::cout << "tv\n";
 	delete[] filterButton;
-	std::cout << "fb\n";
+	filterButton = nullptr;
+	// std::cout << "fb\n";
        	delete tryComs;
-	std::cout << "tc\n";
+	tryComs = nullptr;
+	// std::cout << "tc\n";
 	delete exit;
-	std::cout << "e\n";
+	exit = nullptr;
+	// std::cout << "e\n";
 	delete refresh;
-	std::cout << "r\n";
+	refresh = nullptr;
+	// std::cout << "r\n";
 	delete username;
-	std::cout << "u\n";
+	username = nullptr;
+	// std::cout << "u\n";
 	delete hbox;
-	std::cout << "hb\n";
+	hbox = nullptr;
+	// std::cout << "hb\n";
 	delete grid;
+	grid = nullptr;
         delete viewport;
+	viewport = nullptr;
 	delete area;
+	area = nullptr;
 	delete mainhbox;
+	mainhbox = nullptr;
 	delete error;
+	error = nullptr;
+	delete fieldvbox;
+	fieldvbox = nullptr;
+	delete fieldview;
+	fieldview = nullptr;
 	delete vbox;
+	vbox = nullptr;
 	delete timer;
-	std::cout << "Going to ifs\n";
+	timer = nullptr;
+	delete[] langStr;
+	langStr = nullptr;
+	delete[] title;
+	title = nullptr;
+	
+	// std::cout << "Going to ifs\n";
 	if (dragoninfo != nullptr) {
 		delete dragoninfo;
 	}
@@ -585,7 +626,8 @@ void mainPage::destroy() {
 	if (txt != nullptr) {
 		delete[] txt;
 	}
-	std::cout << "Everything disappeared\n";
+	// std::cout << "Everything disappeared\n";
+	delete this;
 }
 
 void mainPage::showInfo(jstring* data, int n) {
@@ -606,9 +648,9 @@ void mainPage::showCreation() {
 		delete creationwindow;
 		creationwindow = nullptr;
 	}
-	std::cout << "Deleted\n";	
+	// std::cout << "Deleted\n";	
 	creationwindow = new creationWindow(nullptr, jnienv, jcl, loginStr, passwordStr, txt, this);
-	std::cout << "Created\n";
+	// std::cout << "Created\n";
 	creationwindow->show();
 }
 
@@ -629,19 +671,20 @@ void mainPage::createFilter(int n) {
 	else {
 		dct = jnienv->GetArrayLength(dragons);
 	}
+//	std::cout << dct << "\n";
 	valueSet[n].clear();
 	for (int i = 0; i < dct; ++i) {
                 jobjectArray curDr = jobjectArray(jnienv->GetObjectArrayElement(dragons, i));
 		valueSet[n].insert(jstring(jnienv->GetObjectArrayElement(curDr, n)));
 	}
-	std::cout << "Set size " << valueSet[n].size() << "\n";
+//	std::cout << "Set size " << valueSet[n].size() << "\n";
 	if (filterWindow != nullptr) {
 		delete filterWindow;
 		filterWindow = nullptr;
 	}
-	std::cout << "Deleted\n";	
+	// std::cout << "Deleted\n";	
 	filterWindow = new filter(nullptr, &valueSet[n], n, txt[n+7], jnienv, jcl, loginStr, passwordStr, txt, this);
-	std::cout << "Created\n";
+	// std::cout << "Created\n";
 	filterWindow->show();
 }
 

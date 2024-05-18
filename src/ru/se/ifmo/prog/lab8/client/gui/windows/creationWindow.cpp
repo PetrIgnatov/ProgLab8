@@ -63,12 +63,12 @@ void creationWindow::closeEvent(QCloseEvent* event) {
 	delete[] line;
 	delete form;
 	delete save;
-	std::cout << "save deleted\n";
+	// std::cout << "save deleted\n";
 	delete error;
-	std::cout << "Error deleted\n";
+	// std::cout << "Error deleted\n";
 	delete vbox;
 	mp->creationDestroy();
-	std::cout << "Edit window closed\n";
+	// std::cout << "Edit window closed\n";
 }
 
 void creationWindow::paintEvent(QPaintEvent* e) {
@@ -91,14 +91,14 @@ void creationWindow::createDragon() {
 	}
 	jobjectArray dr = jnienv->NewObjectArray(9, jnienv->FindClass("java/lang/String"), NULL);
 	for (int i = 0; i < 9; ++i) {
-//		std::cout << ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text().toStdString() << "\n";
+//		// std::cout << ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text().toStdString() << "\n";
 		jstring jstr = QStr_to_jstr(jnienv, line[i]->text()); //Проверить аргументы
 		jnienv->SetObjectArrayElement(dr, i, jstr);
 		jnienv->DeleteLocalRef(jstr);
 	}
 	jboolean response = jnienv->CallStaticBooleanMethod(*jcl, method, dr, QStr_to_jstr(jnienv, loginStr), QStr_to_jstr(jnienv, passwordStr));
 	jnienv->DeleteLocalRef(dr);
-	if (response) {
+	if (!response) {
 		error->setText(text[22]);
 	}
 	else {

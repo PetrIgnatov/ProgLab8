@@ -56,13 +56,13 @@ dragonInfo::dragonInfo(QWidget* parent, jstring* values, int n, JNIEnv* env, jcl
 
 void dragonInfo::closeEvent(QCloseEvent* event) {
 	for (int i = 0; i < 11; ++i) {
-		std::cout << i << "\n";
+		// std::cout << i << "\n";
 		delete line[i];
 		delete label[i];
 	}
 	delete[] label;
 	delete[] line;
-	std::cout << "arrays deleted\n";
+	// std::cout << "arrays deleted\n";
 	delete form;
 	delete save;
 	delete error;
@@ -70,7 +70,7 @@ void dragonInfo::closeEvent(QCloseEvent* event) {
 	if (mp != nullptr) {
 		mp->infoDestroy();
 	}
-	std::cout << "Edit window closed\n";
+	// std::cout << "Edit window closed\n";
 }
 
 void dragonInfo::paintEvent(QPaintEvent* e) {
@@ -94,8 +94,8 @@ void dragonInfo::changeDragon() {
 	}
 	jobjectArray dr = jnienv->NewObjectArray(9, jnienv->FindClass("java/lang/String"), NULL);
 	for (int i = 0; i < 9; ++i) {
-		std::cout << (i < 3 ? i+1 : i+2) << "\n";
-//		std::cout << ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text().toStdString() << "\n";
+		// std::cout << (i < 3 ? i+1 : i+2) << "\n";
+//		// std::cout << ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text().toStdString() << "\n";
 		jstring jstr = QStr_to_jstr(jnienv, ((QLineEdit*)(line[(i < 3 ? i+1 : i+2)]))->text()); //Проверить аргументы
 		jnienv->SetObjectArrayElement(dr, i, jstr);
 		jnienv->DeleteLocalRef(jstr);
@@ -103,7 +103,7 @@ void dragonInfo::changeDragon() {
 	jboolean response = jnienv->CallStaticBooleanMethod(*jcl, method, QStr_to_jstr(jnienv,num), dr, QStr_to_jstr(jnienv, loginStr), QStr_to_jstr(jnienv, passwordStr));
 	jnienv->DeleteLocalRef(dr);
 	if (!response) {
-		std::cout << "Error changing dragon\n";
+		// std::cout << "Error changing dragon\n";
 		error->setText(text[20]);
 	}
 	else {

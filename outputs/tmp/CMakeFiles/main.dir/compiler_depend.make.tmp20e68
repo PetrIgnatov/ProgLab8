@@ -383,13 +383,6 @@ CMakeFiles/main.dir/main.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo
   /usr/include/qt5/QtWidgets/qtextedit.h \
   /usr/include/qt5/QtGui/qtextdocument.h \
   /usr/include/qt5/QtCore/qurl.h \
-  /usr/include/qt5/QtGui/QKeyEvent \
-  /usr/include/qt5/QtGui/qevent.h \
-  /usr/include/qt5/QtCore/qset.h \
-  /usr/include/qt5/QtCore/qfile.h \
-  /usr/include/qt5/QtCore/qfiledevice.h \
-  /usr/include/qt5/QtGui/qvector2d.h \
-  /usr/include/qt5/QtGui/qtouchdevice.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
   /usr/include/qt5/QtCore/QString \
   /usr/include/qt5/QtCore/qstring.h \
@@ -786,14 +779,6 @@ CMakeFiles/main.dir/windows/commandWindow.cpp.o: /home/Petrign/Проги/ProgLa
   /usr/include/qt5/QtCore/qvariantanimation.h \
   /usr/include/qt5/QtCore/qeasingcurve.h \
   /usr/include/qt5/QtCore/qabstractanimation.h \
-  /usr/include/qt5/QtGui/QKeyEvent \
-  /usr/include/qt5/QtGui/qevent.h \
-  /usr/include/qt5/QtCore/qcoreevent.h \
-  /usr/include/qt5/QtCore/qset.h \
-  /usr/include/qt5/QtCore/qfile.h \
-  /usr/include/qt5/QtCore/qfiledevice.h \
-  /usr/include/qt5/QtGui/qvector2d.h \
-  /usr/include/qt5/QtGui/qtouchdevice.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
   /usr/include/c++/12/iostream \
   /usr/include/c++/12/ostream \
@@ -1199,14 +1184,6 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o: /home/Petrign/Проги/Pro
   /usr/include/qt5/QtWidgets/qtextedit.h \
   /usr/include/qt5/QtGui/qtextdocument.h \
   /usr/include/qt5/QtCore/qurl.h \
-  /usr/include/qt5/QtGui/QKeyEvent \
-  /usr/include/qt5/QtGui/qevent.h \
-  /usr/include/qt5/QtCore/qcoreevent.h \
-  /usr/include/qt5/QtCore/qset.h \
-  /usr/include/qt5/QtCore/qfile.h \
-  /usr/include/qt5/QtCore/qfiledevice.h \
-  /usr/include/qt5/QtGui/qvector2d.h \
-  /usr/include/qt5/QtGui/qtouchdevice.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.h \
   /usr/include/c++/12/set \
@@ -1583,14 +1560,6 @@ CMakeFiles/main.dir/windows/creationWindow.cpp.o: /home/Petrign/Проги/ProgL
   /usr/include/qt5/QtWidgets/qtextedit.h \
   /usr/include/qt5/QtGui/qtextdocument.h \
   /usr/include/qt5/QtCore/qurl.h \
-  /usr/include/qt5/QtGui/QKeyEvent \
-  /usr/include/qt5/QtGui/qevent.h \
-  /usr/include/qt5/QtCore/qcoreevent.h \
-  /usr/include/qt5/QtCore/qset.h \
-  /usr/include/qt5/QtCore/qfile.h \
-  /usr/include/qt5/QtCore/qfiledevice.h \
-  /usr/include/qt5/QtGui/qvector2d.h \
-  /usr/include/qt5/QtGui/qtouchdevice.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.h \
   /usr/include/c++/12/set \
   /usr/include/c++/12/bits/stl_set.h \
@@ -2339,14 +2308,6 @@ CMakeFiles/main.dir/windows/dragonInfo.cpp.o: /home/Petrign/Проги/ProgLab8/
   /usr/include/qt5/QtWidgets/qtextedit.h \
   /usr/include/qt5/QtGui/qtextdocument.h \
   /usr/include/qt5/QtCore/qurl.h \
-  /usr/include/qt5/QtGui/QKeyEvent \
-  /usr/include/qt5/QtGui/qevent.h \
-  /usr/include/qt5/QtCore/qcoreevent.h \
-  /usr/include/qt5/QtCore/qset.h \
-  /usr/include/qt5/QtCore/qfile.h \
-  /usr/include/qt5/QtCore/qfiledevice.h \
-  /usr/include/qt5/QtGui/qvector2d.h \
-  /usr/include/qt5/QtGui/qtouchdevice.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
   /usr/include/qt5/QtCore/QString \
   /usr/include/qt5/QtCore/qstring.h \
@@ -2751,14 +2712,6 @@ CMakeFiles/main.dir/windows/filter.cpp.o: /home/Petrign/Проги/ProgLab8/src/
   /usr/include/qt5/QtWidgets/qtextedit.h \
   /usr/include/qt5/QtGui/qtextdocument.h \
   /usr/include/qt5/QtCore/qurl.h \
-  /usr/include/qt5/QtGui/QKeyEvent \
-  /usr/include/qt5/QtGui/qevent.h \
-  /usr/include/qt5/QtCore/qcoreevent.h \
-  /usr/include/qt5/QtCore/qset.h \
-  /usr/include/qt5/QtCore/qfile.h \
-  /usr/include/qt5/QtCore/qfiledevice.h \
-  /usr/include/qt5/QtGui/qvector2d.h \
-  /usr/include/qt5/QtGui/qtouchdevice.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
   /usr/include/qt5/QtCore/QString \
   /usr/include/qt5/QtCore/qstring.h \
@@ -3161,14 +3114,6 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
   /usr/include/qt5/QtWidgets/qtextedit.h \
   /usr/include/qt5/QtGui/qtextdocument.h \
   /usr/include/qt5/QtCore/qurl.h \
-  /usr/include/qt5/QtGui/QKeyEvent \
-  /usr/include/qt5/QtGui/qevent.h \
-  /usr/include/qt5/QtCore/qcoreevent.h \
-  /usr/include/qt5/QtCore/qset.h \
-  /usr/include/qt5/QtCore/qfile.h \
-  /usr/include/qt5/QtCore/qfiledevice.h \
-  /usr/include/qt5/QtGui/qvector2d.h \
-  /usr/include/qt5/QtGui/qtouchdevice.h \
   /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
   /usr/include/qt5/QtCore/QString \
   /usr/include/qt5/QtCore/qstring.h \
@@ -3249,6 +3194,8 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 
 /usr/include/qt5/QtCore/QPropertyAnimation:
 
+/usr/include/qt5/QtWidgets/QProgressBar:
+
 /usr/include/qt5/QtWidgets/QCheckBox:
 
 /usr/include/c++/12/bits/stl_multiset.h:
@@ -3258,16 +3205,6 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 /usr/include/qt5/QtCore/QString:
 
 /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h:
-
-/usr/include/qt5/QtWidgets/QProgressBar:
-
-/usr/include/qt5/QtGui/qvector2d.h:
-
-/usr/include/qt5/QtCore/qfiledevice.h:
-
-/usr/include/qt5/QtCore/qset.h:
-
-/usr/include/qt5/QtGui/qevent.h:
 
 /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.h:
 
@@ -3322,8 +3259,6 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 /usr/include/qt5/QtGui/qicon.h:
 
 /usr/include/qt5/QtWidgets/qabstractbutton.h:
-
-/usr/include/qt5/QtCore/qfile.h:
 
 /usr/include/qt5/QtWidgets/qpushbutton.h:
 
@@ -3679,8 +3614,6 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 
 /usr/include/gnu/stubs.h:
 
-/usr/include/qt5/QtGui/QKeyEvent:
-
 /usr/include/c++/12/bits/stl_iterator_base_types.h:
 
 /usr/include/bits/endian.h:
@@ -4014,8 +3947,6 @@ main_autogen/mocs_compilation.cpp:
 /usr/include/qt5/QtCore/qcompilerdetection.h:
 
 /usr/include/c++/12/algorithm:
-
-/usr/include/qt5/QtGui/qtouchdevice.h:
 
 /usr/include/c++/12/bits/stl_algo.h:
 

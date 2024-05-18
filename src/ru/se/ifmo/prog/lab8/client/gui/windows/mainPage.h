@@ -42,46 +42,45 @@ class mainPage : public QWidget {
 		void paintEvent(QPaintEvent* event);
 		void closeEvent(QCloseEvent* event);
 	private:
-		QPushButton** langBtn;
-		QString* langStr;
+		QPushButton** langBtn; //+
+		QString* langStr; //+
 		int dragCountTable;
 		int dragCountField;
-		QPushButton* addTable;
-		QPushButton* addField;
-		QString* title;
-		QLabel** titleLabel;
-		QPushButton** sortButton;
-		QPushButton** filterButton;
-		QGridLayout* grid;
+		QPushButton* addTable; //+
+		QString* title; //+
+		QLabel** titleLabel; //+
+		QPushButton** sortButton; //+
+		QPushButton** filterButton; //+
+		QGridLayout* grid; //+
 		JNIEnv* jnienv;
 		jclass* jcl;
-		QLabel* username;
-		QHBoxLayout* hbox;
-		QHBoxLayout* mainhbox;
-		QVBoxLayout* vbox;
-		QVBoxLayout* fieldvbox;
-		QWidget* fieldview;
-		QPushButton* tryComs;
-		QPushButton* exit;
-		QPushButton* refresh;
-		QPushButton** dragonBtn;
-		QScrollArea* area;
-		QWidget* viewport;
-		QWidget*** dragon;
+		QLabel* username; //+
+		QHBoxLayout* hbox; //+
+		QHBoxLayout* mainhbox; //+
+		QVBoxLayout* vbox; //+
+		QVBoxLayout* fieldvbox; //*
+		QWidget* fieldview; //+
+		QPushButton* tryComs; //+
+		QPushButton* exit; //+
+		QPushButton* refresh; //+
+		QPushButton** dragonBtn; //+
+		QScrollArea* area; //+
+		QWidget* viewport; //+
+		QWidget*** dragon; //+
 		QString loginStr;
 		QString passwordStr;
-		QTimer* timer;
+		QTimer* timer; //+
 		QProgressBar* progress;
 		QPropertyAnimation* anim;
-		jstring** dragonStr;
-		dragonField* dragonfield;
-		dragonInfo* dragoninfo;
-		filter* filterWindow;
-		creationWindow* creationwindow;
+		jstring** dragonStr; //+
+		dragonField* dragonfield; //+
+		dragonInfo* dragoninfo; //+
+		filter* filterWindow; //+
+		creationWindow* creationwindow; //+
 		std::map <std::string, std::string> color;
 		std::set<jstring>* valueSet;
-		QString* txt;
-		QLabel* error;
+		QString* txt; //+
+		QLabel* error; //+
 		int curErr;
 		commandWindow* commandwindow; 
 		bool updateLock;
@@ -102,11 +101,11 @@ class mainPage : public QWidget {
 		void setText();
 		void drawGuiField();
 		void openComW();
-		void destroy();
 		void setSort(int field);
 		void showInfo(jstring* data, int n);
 		void showCreation();
 		void createFilter(int i);
 	public slots:
 		void drawGuiTable();
+		void destroy();
 };

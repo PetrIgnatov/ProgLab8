@@ -66,7 +66,7 @@ public class DatabaseConnector {
 		        ps.setString(2, (dragon.getName() != null ? dragon.getName() : "NULL"));
 			ps.setInt(3, dragon.getCoordinates().getXPtr());
 			ps.setFloat(4, dragon.getCoordinates().getYPtr());
-			ps.setTimestamp(5, java.sql.Timestamp.valueOf(dragon.getDate()));
+			ps.setTimestamp(5, new java.sql.Timestamp(dragon.getDate().getTime()));
 			ps.setInt(6, dragon.getAge());
 			ps.setObject(7, (dragon.getColorStr() != null ? dragon.getColorStr() : "NULL"), Types.OTHER);
 			ps.setObject(8, (dragon.getTypeStr() != null ? dragon.getTypeStr() : "NULL"), Types.OTHER);

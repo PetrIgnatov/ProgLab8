@@ -263,6 +263,10 @@ CMakeFiles/main.dir/windows/commandWindow.cpp.o: \
  /usr/include/qt5/QtCore/qvariantanimation.h \
  /usr/include/qt5/QtCore/qeasingcurve.h \
  /usr/include/qt5/QtCore/qabstractanimation.h \
+ /usr/include/qt5/QtGui/QKeyEvent /usr/include/qt5/QtGui/qevent.h \
+ /usr/include/qt5/QtCore/qcoreevent.h /usr/include/qt5/QtCore/qset.h \
+ /usr/include/qt5/QtCore/qfile.h /usr/include/qt5/QtCore/qfiledevice.h \
+ /usr/include/qt5/QtGui/qvector2d.h /usr/include/qt5/QtGui/qtouchdevice.h \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
  /usr/include/c++/12/ios /usr/include/c++/12/bits/basic_ios.h \
