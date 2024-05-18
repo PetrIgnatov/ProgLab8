@@ -231,7 +231,7 @@ public class Dragon implements Comparable<Dragon>, Serializable {
 	}
 	@Override
 	public String toString() {
-		return Integer.toString(id) + ";" + name + ";" + coordinates.toString() + ";" + creationDate.toString() + ";" + Integer.toString(age) + ";" + (color == null ? "" : color.toString()) + ";" + (type == null ? "" : type.toString()) + ";" + (character == null ? "" : character.toString()) + ";" + (cave == null ? "" : cave.toString()) + ";";
+		return Integer.toString(id) + ";" + name + ";" + coordinates.toString() + ";" + creationDate.toString() + ";" + Integer.toString(age) + ";" + (color == null ? "" : color.toString()) + ";" + (type == null ? "" : type.toString()) + ";" + (character == null ? "" : character.toString()) + ";" + (cave == null ? "" : cave.toString()) + ";" + owner + ";";
 	}
 }
 

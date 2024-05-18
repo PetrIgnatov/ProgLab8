@@ -63,10 +63,13 @@ CMAKE_BINARY_DIR = /home/Petrign/Проги/ProgLab8/outputs/tmp
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/dragonInfo.dir/all
 all: CMakeFiles/connectionWindow.dir/all
 all: CMakeFiles/mainPage.dir/all
 all: CMakeFiles/dragonField.dir/all
 all: CMakeFiles/commandWindow.dir/all
+all: CMakeFiles/creationWindow.dir/all
+all: CMakeFiles/filter.dir/all
 all: CMakeFiles/main.dir/all
 all: jni/all
 .PHONY : all
@@ -76,15 +79,21 @@ preinstall: jni/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/dragonInfo.dir/clean
 clean: CMakeFiles/connectionWindow.dir/clean
 clean: CMakeFiles/mainPage.dir/clean
 clean: CMakeFiles/dragonField.dir/clean
 clean: CMakeFiles/commandWindow.dir/clean
+clean: CMakeFiles/creationWindow.dir/clean
+clean: CMakeFiles/filter.dir/clean
 clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/dragonInfo_autogen.dir/clean
 clean: CMakeFiles/connectionWindow_autogen.dir/clean
 clean: CMakeFiles/mainPage_autogen.dir/clean
 clean: CMakeFiles/dragonField_autogen.dir/clean
 clean: CMakeFiles/commandWindow_autogen.dir/clean
+clean: CMakeFiles/creationWindow_autogen.dir/clean
+clean: CMakeFiles/filter_autogen.dir/clean
 clean: CMakeFiles/main_autogen.dir/clean
 clean: jni/clean
 .PHONY : clean
@@ -104,6 +113,32 @@ jni/preinstall:
 jni/clean: jni/CMakeFiles/jnicode.dir/clean
 jni/clean: jni/CMakeFiles/jnicode_autogen.dir/clean
 .PHONY : jni/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/dragonInfo.dir
+
+# All Build rule for target.
+CMakeFiles/dragonInfo.dir/all: CMakeFiles/dragonInfo_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonInfo.dir/build.make CMakeFiles/dragonInfo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonInfo.dir/build.make CMakeFiles/dragonInfo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=13,14 "Built target dragonInfo"
+.PHONY : CMakeFiles/dragonInfo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/dragonInfo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/dragonInfo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 0
+.PHONY : CMakeFiles/dragonInfo.dir/rule
+
+# Convenience name for target.
+dragonInfo: CMakeFiles/dragonInfo.dir/rule
+.PHONY : dragonInfo
+
+# clean rule for target.
+CMakeFiles/dragonInfo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonInfo.dir/build.make CMakeFiles/dragonInfo.dir/clean
+.PHONY : CMakeFiles/dragonInfo.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/connectionWindow.dir
@@ -138,7 +173,7 @@ CMakeFiles/connectionWindow.dir/clean:
 CMakeFiles/mainPage.dir/all: CMakeFiles/mainPage_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage.dir/build.make CMakeFiles/mainPage.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage.dir/build.make CMakeFiles/mainPage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=21,22 "Built target mainPage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=33,34 "Built target mainPage"
 .PHONY : CMakeFiles/mainPage.dir/all
 
 # Build rule for subdir invocation for target.
@@ -164,7 +199,7 @@ CMakeFiles/mainPage.dir/clean:
 CMakeFiles/dragonField.dir/all: CMakeFiles/dragonField_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField.dir/build.make CMakeFiles/dragonField.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField.dir/build.make CMakeFiles/dragonField.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=7,8 "Built target dragonField"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=10,11 "Built target dragonField"
 .PHONY : CMakeFiles/dragonField.dir/all
 
 # Build rule for subdir invocation for target.
@@ -210,6 +245,58 @@ CMakeFiles/commandWindow.dir/clean:
 .PHONY : CMakeFiles/commandWindow.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/creationWindow.dir
+
+# All Build rule for target.
+CMakeFiles/creationWindow.dir/all: CMakeFiles/creationWindow_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/creationWindow.dir/build.make CMakeFiles/creationWindow.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/creationWindow.dir/build.make CMakeFiles/creationWindow.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=7,8 "Built target creationWindow"
+.PHONY : CMakeFiles/creationWindow.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/creationWindow.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/creationWindow.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 0
+.PHONY : CMakeFiles/creationWindow.dir/rule
+
+# Convenience name for target.
+creationWindow: CMakeFiles/creationWindow.dir/rule
+.PHONY : creationWindow
+
+# clean rule for target.
+CMakeFiles/creationWindow.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/creationWindow.dir/build.make CMakeFiles/creationWindow.dir/clean
+.PHONY : CMakeFiles/creationWindow.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/filter.dir
+
+# All Build rule for target.
+CMakeFiles/filter.dir/all: CMakeFiles/filter_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=16,17 "Built target filter"
+.PHONY : CMakeFiles/filter.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/filter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/filter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 0
+.PHONY : CMakeFiles/filter.dir/rule
+
+# Convenience name for target.
+filter: CMakeFiles/filter.dir/rule
+.PHONY : filter
+
+# clean rule for target.
+CMakeFiles/filter.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/clean
+.PHONY : CMakeFiles/filter.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
@@ -217,12 +304,12 @@ CMakeFiles/main.dir/all: jni/CMakeFiles/jnicode.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/main_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=14,15,16,17,18,19,20 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -235,6 +322,32 @@ main: CMakeFiles/main.dir/rule
 CMakeFiles/main.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
 .PHONY : CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/dragonInfo_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/dragonInfo_autogen.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonInfo_autogen.dir/build.make CMakeFiles/dragonInfo_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonInfo_autogen.dir/build.make CMakeFiles/dragonInfo_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=15 "Built target dragonInfo_autogen"
+.PHONY : CMakeFiles/dragonInfo_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/dragonInfo_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/dragonInfo_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 0
+.PHONY : CMakeFiles/dragonInfo_autogen.dir/rule
+
+# Convenience name for target.
+dragonInfo_autogen: CMakeFiles/dragonInfo_autogen.dir/rule
+.PHONY : dragonInfo_autogen
+
+# clean rule for target.
+CMakeFiles/dragonInfo_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonInfo_autogen.dir/build.make CMakeFiles/dragonInfo_autogen.dir/clean
+.PHONY : CMakeFiles/dragonInfo_autogen.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/connectionWindow_autogen.dir
@@ -269,7 +382,7 @@ CMakeFiles/connectionWindow_autogen.dir/clean:
 CMakeFiles/mainPage_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage_autogen.dir/build.make CMakeFiles/mainPage_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainPage_autogen.dir/build.make CMakeFiles/mainPage_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=23 "Built target mainPage_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=35 "Built target mainPage_autogen"
 .PHONY : CMakeFiles/mainPage_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -295,7 +408,7 @@ CMakeFiles/mainPage_autogen.dir/clean:
 CMakeFiles/dragonField_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField_autogen.dir/build.make CMakeFiles/dragonField_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dragonField_autogen.dir/build.make CMakeFiles/dragonField_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=9 "Built target dragonField_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=12 "Built target dragonField_autogen"
 .PHONY : CMakeFiles/dragonField_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -341,13 +454,65 @@ CMakeFiles/commandWindow_autogen.dir/clean:
 .PHONY : CMakeFiles/commandWindow_autogen.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/creationWindow_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/creationWindow_autogen.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/creationWindow_autogen.dir/build.make CMakeFiles/creationWindow_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/creationWindow_autogen.dir/build.make CMakeFiles/creationWindow_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=9 "Built target creationWindow_autogen"
+.PHONY : CMakeFiles/creationWindow_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/creationWindow_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/creationWindow_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 0
+.PHONY : CMakeFiles/creationWindow_autogen.dir/rule
+
+# Convenience name for target.
+creationWindow_autogen: CMakeFiles/creationWindow_autogen.dir/rule
+.PHONY : creationWindow_autogen
+
+# clean rule for target.
+CMakeFiles/creationWindow_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/creationWindow_autogen.dir/build.make CMakeFiles/creationWindow_autogen.dir/clean
+.PHONY : CMakeFiles/creationWindow_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/filter_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/filter_autogen.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/filter_autogen.dir/build.make CMakeFiles/filter_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/filter_autogen.dir/build.make CMakeFiles/filter_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=18 "Built target filter_autogen"
+.PHONY : CMakeFiles/filter_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/filter_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/filter_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles 0
+.PHONY : CMakeFiles/filter_autogen.dir/rule
+
+# Convenience name for target.
+filter_autogen: CMakeFiles/filter_autogen.dir/rule
+.PHONY : filter_autogen
+
+# clean rule for target.
+CMakeFiles/filter_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/filter_autogen.dir/build.make CMakeFiles/filter_autogen.dir/clean
+.PHONY : CMakeFiles/filter_autogen.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/main_autogen.dir
 
 # All Build rule for target.
 CMakeFiles/main_autogen.dir/all: jni/CMakeFiles/jnicode.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_autogen.dir/build.make CMakeFiles/main_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_autogen.dir/build.make CMakeFiles/main_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=24 "Built target main_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=36 "Built target main_autogen"
 .PHONY : CMakeFiles/main_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -373,7 +538,7 @@ CMakeFiles/main_autogen.dir/clean:
 jni/CMakeFiles/jnicode.dir/all: jni/CMakeFiles/jnicode_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f jni/CMakeFiles/jnicode.dir/build.make jni/CMakeFiles/jnicode.dir/depend
 	$(MAKE) $(MAKESILENT) -f jni/CMakeFiles/jnicode.dir/build.make jni/CMakeFiles/jnicode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=10,11,12 "Built target jnicode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=19,20,21 "Built target jnicode"
 .PHONY : jni/CMakeFiles/jnicode.dir/all
 
 # Build rule for subdir invocation for target.
@@ -399,7 +564,7 @@ jni/CMakeFiles/jnicode.dir/clean:
 jni/CMakeFiles/jnicode_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f jni/CMakeFiles/jnicode_autogen.dir/build.make jni/CMakeFiles/jnicode_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f jni/CMakeFiles/jnicode_autogen.dir/build.make jni/CMakeFiles/jnicode_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=13 "Built target jnicode_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles --progress-num=22 "Built target jnicode_autogen"
 .PHONY : jni/CMakeFiles/jnicode_autogen.dir/all
 
 # Build rule for subdir invocation for target.

@@ -33,4 +33,30 @@ public class StringShallow implements Serializable {
 	public String getPassword() {
 		return password;
 	}
+
+	public static boolean isInteger(String s) {
+		if (s == null) {
+			return true;
+		}
+		try {
+			Integer.parseInt(s);
+		}
+		catch (Exception e) {
+			return false;
+		}
+		return true;
+	}
+
+	public static boolean isFloat(String s) {
+		if (s == null) {
+			return true;
+		}
+		try {
+			Float.parseFloat(s);
+		}
+		catch (Exception e) {
+			return false;
+		}
+		return true;
+	}
 }

@@ -9,12 +9,16 @@
 #include <QVBoxLayout>
 #include <string>
 #include <QTextEdit>
+#include "mainPage.h"
+
+class mainPage;
 
 class commandWindow : public QWidget {
 	public:
-		commandWindow(QWidget* parent = 0, JNIEnv* env = nullptr, jclass* cl = nullptr, QString login = "", QString password = "");
+		commandWindow(QWidget* parent = 0, JNIEnv* env = nullptr, jclass* cl = nullptr, QString login = "", QString password = "", QString* txt = nullptr, bool* lock = nullptr, mainPage* mp = nullptr);
 	protected:
 		void paintEvent(QPaintEvent* event);
+		void closeEvent(QCloseEvent* event);
 	private:
 		QString loginStr;
 		QString passwordStr;
@@ -25,6 +29,8 @@ class commandWindow : public QWidget {
 		QLineEdit* terminalI;
 		JNIEnv* jnienv;
 		jclass* jcl;
+		mainPage* mainpage;
+		bool* updateLock;
 		void drawBackground();
 		void changeWindow();
 		void createAnother();

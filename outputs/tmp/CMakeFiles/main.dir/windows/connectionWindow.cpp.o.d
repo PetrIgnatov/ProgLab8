@@ -234,6 +234,7 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o: \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/connectionWindow.h \
  /usr/include/qt5/QtWidgets/QVBoxLayout \
  /usr/include/qt5/QtWidgets/qboxlayout.h \
+ /usr/include/qt5/QtWidgets/QHBoxLayout \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
  /usr/include/qt5/QtCore/QString /usr/include/qt5/QtCore/qstring.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
@@ -250,12 +251,32 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o: \
  /usr/include/qt5/QtGui/qpen.h /usr/include/qt5/QtGui/QColor \
  /usr/include/qt5/QtGui/qcolor.h \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.h \
- /usr/include/qt5/QtWidgets/QHBoxLayout \
  /usr/include/qt5/QtWidgets/QScrollArea \
  /usr/include/qt5/QtWidgets/qscrollarea.h \
  /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h \
  /usr/include/qt5/QtCore/QTimer /usr/include/qt5/QtCore/qtimer.h \
- /usr/include/qt5/QtCore/qbasictimer.h /usr/include/c++/12/thread \
+ /usr/include/qt5/QtCore/qbasictimer.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonInfo.h \
+ /usr/include/qt5/QtWidgets/QFormLayout \
+ /usr/include/qt5/QtWidgets/qformlayout.h \
+ /usr/include/qt5/QtWidgets/QLayout /usr/include/qt5/QtWidgets/qlayout.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.h \
+ /usr/include/qt5/QtWidgets/QTextEdit \
+ /usr/include/qt5/QtWidgets/qtextedit.h \
+ /usr/include/qt5/QtGui/qtextdocument.h /usr/include/qt5/QtCore/qurl.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.h \
+ /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
+ /usr/include/c++/12/bits/stl_multiset.h \
+ /usr/include/qt5/QtWidgets/QCheckBox \
+ /usr/include/qt5/QtWidgets/qcheckbox.h \
+ /usr/include/qt5/QtWidgets/QProgressBar \
+ /usr/include/qt5/QtWidgets/qprogressbar.h \
+ /usr/include/qt5/QtCore/QPropertyAnimation \
+ /usr/include/qt5/QtCore/qpropertyanimation.h \
+ /usr/include/qt5/QtCore/qvariantanimation.h \
+ /usr/include/qt5/QtCore/qeasingcurve.h \
+ /usr/include/qt5/QtCore/qabstractanimation.h /usr/include/c++/12/thread \
  /usr/include/c++/12/bits/std_thread.h \
  /usr/include/c++/12/bits/this_thread_sleep.h

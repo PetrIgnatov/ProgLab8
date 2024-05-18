@@ -12,7 +12,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/Petrign/Проги/ProgLab8/outputs/tmp/main_autogen/mocs_compilation.cpp" "CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.o.d"
   "/home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.cpp" "CMakeFiles/main.dir/windows/commandWindow.cpp.o" "gcc" "CMakeFiles/main.dir/windows/commandWindow.cpp.o.d"
   "/home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/connectionWindow.cpp" "CMakeFiles/main.dir/windows/connectionWindow.cpp.o" "gcc" "CMakeFiles/main.dir/windows/connectionWindow.cpp.o.d"
+  "/home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.cpp" "CMakeFiles/main.dir/windows/creationWindow.cpp.o" "gcc" "CMakeFiles/main.dir/windows/creationWindow.cpp.o.d"
   "/home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp" "CMakeFiles/main.dir/windows/dragonField.cpp.o" "gcc" "CMakeFiles/main.dir/windows/dragonField.cpp.o.d"
+  "/home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonInfo.cpp" "CMakeFiles/main.dir/windows/dragonInfo.cpp.o" "gcc" "CMakeFiles/main.dir/windows/dragonInfo.cpp.o.d"
+  "/home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.cpp" "CMakeFiles/main.dir/windows/filter.cpp.o" "gcc" "CMakeFiles/main.dir/windows/filter.cpp.o.d"
   "/home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.cpp" "CMakeFiles/main.dir/windows/mainPage.cpp.o" "gcc" "CMakeFiles/main.dir/windows/mainPage.cpp.o.d"
   )
 

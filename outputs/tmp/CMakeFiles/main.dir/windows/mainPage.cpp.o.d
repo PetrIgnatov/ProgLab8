@@ -240,9 +240,31 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: \
  /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h \
  /usr/include/qt5/QtCore/QTimer /usr/include/qt5/QtCore/qtimer.h \
- /usr/include/qt5/QtCore/qbasictimer.h /usr/include/c++/12/iostream \
- /usr/include/c++/12/ostream /usr/include/c++/12/ios \
- /usr/include/c++/12/bits/basic_ios.h \
+ /usr/include/qt5/QtCore/qbasictimer.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonInfo.h \
+ /usr/include/qt5/QtWidgets/QFormLayout \
+ /usr/include/qt5/QtWidgets/qformlayout.h \
+ /usr/include/qt5/QtWidgets/QLayout /usr/include/qt5/QtWidgets/qlayout.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.h \
+ /usr/include/qt5/QtWidgets/QTextEdit \
+ /usr/include/qt5/QtWidgets/qtextedit.h \
+ /usr/include/qt5/QtGui/qtextdocument.h /usr/include/qt5/QtCore/qurl.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
+ /usr/include/qt5/QtCore/QString /usr/include/qt5/QtCore/qstring.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.h \
+ /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
+ /usr/include/c++/12/bits/stl_multiset.h \
+ /usr/include/qt5/QtWidgets/QCheckBox \
+ /usr/include/qt5/QtWidgets/qcheckbox.h \
+ /usr/include/qt5/QtWidgets/QProgressBar \
+ /usr/include/qt5/QtWidgets/qprogressbar.h \
+ /usr/include/qt5/QtCore/QPropertyAnimation \
+ /usr/include/qt5/QtCore/qpropertyanimation.h \
+ /usr/include/qt5/QtCore/qvariantanimation.h \
+ /usr/include/qt5/QtCore/qeasingcurve.h \
+ /usr/include/qt5/QtCore/qabstractanimation.h \
+ /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
+ /usr/include/c++/12/ios /usr/include/c++/12/bits/basic_ios.h \
  /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
  /usr/include/wctype.h /usr/include/bits/wctype-wchar.h \
  /usr/include/c++/12/x86_64-redhat-linux/bits/ctype_base.h \
@@ -255,11 +277,13 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: \
  /usr/include/qt5/QtGui/qpen.h /usr/include/qt5/QtGui/QColor \
  /usr/include/qt5/QtGui/qcolor.h \
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
- /usr/include/qt5/QtCore/QString /usr/include/qt5/QtCore/qstring.h \
- /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/commandWindow.h \
- /usr/include/qt5/QtWidgets/QTextEdit \
- /usr/include/qt5/QtWidgets/qtextedit.h \
- /usr/include/qt5/QtGui/qtextdocument.h /usr/include/qt5/QtCore/qurl.h \
  /usr/include/qt5/QtWidgets/QScrollBar \
  /usr/include/qt5/QtWidgets/qscrollbar.h \
- /usr/include/qt5/QtWidgets/qabstractslider.h
+ /usr/include/qt5/QtWidgets/qabstractslider.h /usr/include/c++/12/cmath \
+ /usr/include/math.h /usr/include/bits/math-vector.h \
+ /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
+ /usr/include/bits/fp-fast.h \
+ /usr/include/bits/mathcalls-helper-functions.h \
+ /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
+ /usr/include/bits/iscanonical.h

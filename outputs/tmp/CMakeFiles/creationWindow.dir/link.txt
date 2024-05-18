@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcreationWindow.a CMakeFiles/creationWindow.dir/creationWindow_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libcreationWindow.a

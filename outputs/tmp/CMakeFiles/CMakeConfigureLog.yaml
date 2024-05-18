@@ -39,20 +39,20 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-KeiXiQ"
-      binary: "/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-KeiXiQ"
+      source: "/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-GLWiGP"
+      binary: "/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-GLWiGP"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-KeiXiQ
+        Change Dir: /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-GLWiGP
         
-        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_474f4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_474f4.dir/build.make CMakeFiles/cmTC_474f4.dir/build
-        gmake[1]: Entering directory '/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-KeiXiQ'
-        Building CXX object CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/lib64/ccache/c++   -v -o CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_69aa5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_69aa5.dir/build.make CMakeFiles/cmTC_69aa5.dir/build
+        gmake[1]: Entering directory '/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-GLWiGP'
+        Building CXX object CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/lib64/ccache/c++   -v -o CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -90,9 +90,9 @@ events:
         COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/12/:/usr/libexec/gcc/x86_64-redhat-linux/12/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/12/:/usr/lib/gcc/x86_64-redhat-linux/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/12/:/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/
         COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_b1846.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b1846.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_474f4
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_474f4.dir/link.txt --verbose=1
-        /usr/lib64/ccache/c++  -v -rdynamic CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_474f4 
+        Linking CXX executable cmTC_69aa5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69aa5.dir/link.txt --verbose=1
+        /usr/lib64/ccache/c++  -v -rdynamic CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_69aa5 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper
@@ -105,10 +105,10 @@ events:
         gcc version 12.2.1 20221121 (Red Hat 12.2.1-4) (GCC) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/12/:/usr/libexec/gcc/x86_64-redhat-linux/12/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/12/:/usr/lib/gcc/x86_64-redhat-linux/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/12/:/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_474f4' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_474f4.'
-         /usr/libexec/gcc/x86_64-redhat-linux/12/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cck4e7X0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_474f4 /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/12 -L/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/12/../../.. CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/12/crtend.o /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_474f4' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_474f4.'
-        gmake[1]: Leaving directory '/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-KeiXiQ'
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_69aa5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_69aa5.'
+         /usr/libexec/gcc/x86_64-redhat-linux/12/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKtYyO5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_69aa5 /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/12 -L/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/12/../../.. CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/12/crtend.o /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_69aa5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_69aa5.'
+        gmake[1]: Leaving directory '/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-GLWiGP'
         
       exitCode: 0
   -
@@ -146,12 +146,12 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-KeiXiQ]
+        ignore line: [Change Dir: /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-GLWiGP]
         ignore line: []
-        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_474f4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_474f4.dir/build.make CMakeFiles/cmTC_474f4.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-KeiXiQ']
-        ignore line: [Building CXX object CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/lib64/ccache/c++   -v -o CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_69aa5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_69aa5.dir/build.make CMakeFiles/cmTC_69aa5.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-GLWiGP']
+        ignore line: [Building CXX object CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/lib64/ccache/c++   -v -o CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -189,9 +189,9 @@ events:
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/12/:/usr/libexec/gcc/x86_64-redhat-linux/12/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/12/:/usr/lib/gcc/x86_64-redhat-linux/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/12/:/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/]
         ignore line: [COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_b1846.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b1846.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_474f4]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_474f4.dir/link.txt --verbose=1]
-        ignore line: [/usr/lib64/ccache/c++  -v -rdynamic CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_474f4 ]
+        ignore line: [Linking CXX executable cmTC_69aa5]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69aa5.dir/link.txt --verbose=1]
+        ignore line: [/usr/lib64/ccache/c++  -v -rdynamic CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_69aa5 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper]
@@ -204,13 +204,13 @@ events:
         ignore line: [gcc version 12.2.1 20221121 (Red Hat 12.2.1-4) (GCC) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/12/:/usr/libexec/gcc/x86_64-redhat-linux/12/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/12/:/usr/lib/gcc/x86_64-redhat-linux/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/12/:/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_474f4' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_474f4.']
-        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/12/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cck4e7X0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_474f4 /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/12 -L/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/12/../../.. CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/12/crtend.o /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_69aa5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_69aa5.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/12/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKtYyO5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_69aa5 /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/12 -L/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/12/../../.. CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/12/crtend.o /usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crtn.o]
           arg [/usr/libexec/gcc/x86_64-redhat-linux/12/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cck4e7X0.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccKtYyO5.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -226,7 +226,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_474f4] ==> ignore
+          arg [cmTC_69aa5] ==> ignore
           arg [/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crt1.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/crti.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o]
@@ -235,7 +235,7 @@ events:
           arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
           arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
           arg [-L/usr/lib/gcc/x86_64-redhat-linux/12/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/12/../../..]
-          arg [CMakeFiles/cmTC_474f4.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_69aa5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -259,36 +259,4 @@ events:
         implicit fwks: []
       
       
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "/usr/share/cmake/Modules/CheckSourceCompiles.cmake:97 (cmake_check_source_compiles)"
-      - "/usr/share/cmake/Modules/FindJNI.cmake:458 (check_source_compiles)"
-      - "CMakeLists.txt:20 (find_package)"
-    directories:
-      source: "/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-gxYBP7"
-      binary: "/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-gxYBP7"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-    buildResult:
-      variable: "JNI_INCLUDE_PATH2_OPTIONAL"
-      cached: true
-      stdout: |
-        Change Dir: /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-gxYBP7
-        
-        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2cf70/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2cf70.dir/build.make CMakeFiles/cmTC_2cf70.dir/build
-        gmake[1]: вход в каталог «/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-gxYBP7»
-        Building CXX object CMakeFiles/cmTC_2cf70.dir/src.cxx.o
-        /usr/lib64/ccache/c++ -DJNI_INCLUDE_PATH2_OPTIONAL -I/usr/lib/jvm/java/include  -o CMakeFiles/cmTC_2cf70.dir/src.cxx.o -c /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-gxYBP7/src.cxx
-        In file included from /home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-gxYBP7/src.cxx:2:
-        /usr/lib/jvm/java/include/jni.h:45:10: фатальная ошибка: jni_md.h: Нет такого файла или каталога
-           45 | #include "jni_md.h"
-              |          ^~~~~~~~~~
-        компиляция прервана.
-        gmake[1]: *** [CMakeFiles/cmTC_2cf70.dir/build.make:78: CMakeFiles/cmTC_2cf70.dir/src.cxx.o] Ошибка 1
-        gmake[1]: выход из каталога «/home/Petrign/Проги/ProgLab8/outputs/tmp/CMakeFiles/CMakeScratch/TryCompile-gxYBP7»
-        gmake: *** [Makefile:127: cmTC_2cf70/fast] Ошибка 2
-        
-      exitCode: 2
 ...

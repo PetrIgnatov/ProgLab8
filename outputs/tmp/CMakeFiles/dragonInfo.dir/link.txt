@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdragonInfo.a CMakeFiles/dragonInfo.dir/dragonInfo_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libdragonInfo.a

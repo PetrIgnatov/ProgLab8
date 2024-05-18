@@ -238,8 +238,32 @@ CMakeFiles/main.dir/windows/commandWindow.cpp.o: \
  /usr/include/qt5/QtWidgets/qtextedit.h \
  /usr/include/qt5/QtWidgets/qabstractscrollarea.h \
  /usr/include/qt5/QtGui/qtextdocument.h /usr/include/qt5/QtCore/qurl.h \
- /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/mainPage.h \
+ /usr/include/qt5/QtWidgets/QHBoxLayout \
+ /usr/include/qt5/QtWidgets/QScrollArea \
+ /usr/include/qt5/QtWidgets/qscrollarea.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h \
+ /usr/include/qt5/QtCore/QTimer /usr/include/qt5/QtCore/qtimer.h \
+ /usr/include/qt5/QtCore/qbasictimer.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonInfo.h \
+ /usr/include/qt5/QtWidgets/QFormLayout \
+ /usr/include/qt5/QtWidgets/qformlayout.h \
+ /usr/include/qt5/QtWidgets/QLayout /usr/include/qt5/QtWidgets/qlayout.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h \
  /usr/include/qt5/QtCore/QString /usr/include/qt5/QtCore/qstring.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.h \
+ /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
+ /usr/include/c++/12/bits/stl_multiset.h \
+ /usr/include/qt5/QtWidgets/QCheckBox \
+ /usr/include/qt5/QtWidgets/qcheckbox.h \
+ /usr/include/qt5/QtWidgets/QProgressBar \
+ /usr/include/qt5/QtWidgets/qprogressbar.h \
+ /usr/include/qt5/QtCore/QPropertyAnimation \
+ /usr/include/qt5/QtCore/qpropertyanimation.h \
+ /usr/include/qt5/QtCore/qvariantanimation.h \
+ /usr/include/qt5/QtCore/qeasingcurve.h \
+ /usr/include/qt5/QtCore/qabstractanimation.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
  /usr/include/c++/12/ios /usr/include/c++/12/bits/basic_ios.h \
  /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \

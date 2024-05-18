@@ -107,9 +107,27 @@
 			null
 		],
 		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.h",
+			"MU",
+			"Z5D6VF4H2M/moc_creationWindow.cpp",
+			null
+		],
+		[
 			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.h",
 			"MU",
 			"Z5D6VF4H2M/moc_dragonField.cpp",
+			null
+		],
+		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonInfo.h",
+			"MU",
+			"Z5D6VF4H2M/moc_dragonInfo.cpp",
+			null
+		],
+		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.h",
+			"MU",
+			"Z5D6VF4H2M/moc_filter.cpp",
 			null
 		],
 		[
@@ -187,7 +205,22 @@
 			null
 		],
 		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonInfo.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Petrign/\u041f\u0440\u043e\u0433\u0438/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.cpp",
 			"MU",
 			null
 		],

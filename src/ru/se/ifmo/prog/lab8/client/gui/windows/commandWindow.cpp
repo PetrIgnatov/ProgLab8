@@ -12,12 +12,16 @@
 #include <QPen>
 #include <QColor>
 #include <QTextEdit>
+#include "mainPage.h"
 
-commandWindow::commandWindow(QWidget* parent, JNIEnv* env, jclass* cl, QString login, QString password) : QWidget(parent) {
+commandWindow::commandWindow(QWidget* parent, JNIEnv* env, jclass* cl, QString login, QString password, QString* txt, bool* lock, mainPage* mp) : QWidget(parent) {
 	jnienv = env;
 	jcl = cl;
+	mainpage = mp;
 	loginStr = login;
 	passwordStr = password;
+	updateLock = lock;
+	*updateLock = true;
 	QPalette backgroundPal = QPalette();
 	this->setFixedHeight(500);
 	this->setFixedWidth(800);
@@ -31,7 +35,7 @@ commandWindow::commandWindow(QWidget* parent, JNIEnv* env, jclass* cl, QString l
 	terminalO->setStyleSheet("color: white; background: #60000000; border: none; font-size: 12px");
 	terminalI = new QLineEdit();
 	terminalI->setStyleSheet("color: white; background: #60000000; border: none; font-size: 12px");
-	send = new QPushButton("SEND");
+	send = new QPushButton(txt[18]);
 	send->setStyleSheet("color: white; background: #00ba18; border: none; font-size: 12px");
 	QObject::connect(send, &QPushButton::clicked, this, &commandWindow::onBtnClick);
 	vbox->addWidget(terminalO);
@@ -39,6 +43,16 @@ commandWindow::commandWindow(QWidget* parent, JNIEnv* env, jclass* cl, QString l
 	hbox->addWidget(send);
 	vbox->addLayout(hbox);
 	
+}
+
+void commandWindow::closeEvent(QCloseEvent* event) {
+	delete send;
+	delete terminalO;
+	delete terminalI;
+	delete hbox;
+	delete vbox;
+	mainpage->destroyCommand();
+	*updateLock = false;
 }
 
 void commandWindow::paintEvent(QPaintEvent* e) {
@@ -69,6 +83,24 @@ void commandWindow::onBtnClick() {
 		std::cout << "Error!";
 		return;
 	}	
-	jstring response = jstring(jnienv->CallStaticObjectMethod(*jcl, method, QStr_to_jstr(jnienv, terminalI->text()), QStr_to_jstr(jnienv, loginStr), QStr_to_jstr(jnienv, passwordStr)));
-	terminalO->setText(jnienv->GetStringUTFChars(response, nullptr));
+	QString inp = terminalI->text();
+	jstring response = jstring(jnienv->CallStaticObjectMethod(*jcl, method, QStr_to_jstr(jnienv, inp), QStr_to_jstr(jnienv, loginStr), QStr_to_jstr(jnienv, passwordStr)));
+	QString rsp = jnienv->GetStringUTFChars(response, nullptr);
+	terminalO->setText(rsp);
+	if (rsp == "Вы успешно зашли в систему") {
+		int sp = 0;
+		QString l = "", p = "";
+		for (int i = 0; i < inp.size(); ++i) {
+			if (inp[i] == ' ') {
+				sp+=1;
+			}
+			else if (sp == 1) {
+				l += inp[i];
+			}
+			else if (sp == 2) {
+				p += inp[i];
+			}
+		}
+		mainpage->changeUser(l, p);
+	}
 }
