@@ -290,4 +290,18 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: \
  /usr/include/bits/fp-fast.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h
+ /usr/include/bits/iscanonical.h \
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/connectionWindow.h \
+ /usr/include/qt5/QtWidgets/QComboBox \
+ /usr/include/qt5/QtWidgets/qcombobox.h \
+ /usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/qt5/QtWidgets/qstyleoption.h \
+ /usr/include/qt5/QtCore/qlocale.h \
+ /usr/include/qt5/QtWidgets/qabstractspinbox.h \
+ /usr/include/qt5/QtGui/qvalidator.h \
+ /usr/include/qt5/QtCore/qregularexpression.h \
+ /usr/include/qt5/QtWidgets/qslider.h /usr/include/qt5/QtWidgets/qstyle.h \
+ /usr/include/qt5/QtWidgets/qtabbar.h \
+ /usr/include/qt5/QtWidgets/qtabwidget.h \
+ /usr/include/qt5/QtWidgets/qrubberband.h \
+ /usr/include/qt5/QtCore/qabstractitemmodel.h

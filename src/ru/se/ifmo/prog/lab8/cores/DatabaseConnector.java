@@ -26,7 +26,7 @@ public class DatabaseConnector {
 	}
 
 	public DatabaseConnector(Properties logininfo) throws SQLException, SQLTimeoutException {
-		connection = DriverManager.getConnection("jdbc:postgresql://192.168.31.253:5432/proglab7", logininfo);
+		connection = DriverManager.getConnection("jdbc:postgresql://172.28.18.134:5432/proglab7", logininfo);
 		pepper = "63N3R470R";
 		random = new Random();
 	}	

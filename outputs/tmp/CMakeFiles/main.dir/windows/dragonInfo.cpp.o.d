@@ -285,4 +285,18 @@ CMakeFiles/main.dir/windows/dragonInfo.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
- /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
+ /usr/include/qt5/QtWidgets/QComboBox \
+ /usr/include/qt5/QtWidgets/qcombobox.h \
+ /usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/qt5/QtWidgets/qstyleoption.h \
+ /usr/include/qt5/QtCore/qlocale.h \
+ /usr/include/qt5/QtWidgets/qabstractspinbox.h \
+ /usr/include/qt5/QtGui/qvalidator.h \
+ /usr/include/qt5/QtCore/qregularexpression.h \
+ /usr/include/qt5/QtWidgets/qslider.h \
+ /usr/include/qt5/QtWidgets/qabstractslider.h \
+ /usr/include/qt5/QtWidgets/qstyle.h /usr/include/qt5/QtWidgets/qtabbar.h \
+ /usr/include/qt5/QtWidgets/qtabwidget.h \
+ /usr/include/qt5/QtWidgets/qrubberband.h \
+ /usr/include/qt5/QtCore/qabstractitemmodel.h

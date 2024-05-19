@@ -109,6 +109,7 @@ void commandWindow::onBtnClick() {
 			}
 		}
 		mainpage->changeUser(l, p);
+		mainpage->drawGuiTable();
 	}
 	else if (rsp == "exit") {
 		mainpage->destroy();

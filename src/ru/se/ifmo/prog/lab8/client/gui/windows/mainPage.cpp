@@ -28,6 +28,8 @@
 #include <set>
 #include <QProgressBar>
 #include <QPropertyAnimation>
+#include "connectionWindow.h"
+#include <QComboBox>
 
 mainPage::mainPage(QWidget* parent, JNIEnv* env, jclass* cl, QString loginArg, QString passwordArg) : QWidget(parent) {
 	jnienv = env;
@@ -55,6 +57,13 @@ mainPage::mainPage(QWidget* parent, JNIEnv* env, jclass* cl, QString loginArg, Q
 	drawGuiField();
 }
 
+void mainPage::back() {
+	connectionWindow* wind = new connectionWindow(0, 1, jnienv, jcl);
+        wind->setWindowTitle("Change user");
+        wind->show();
+	destroy();
+}
+
 void mainPage::initElements() {
 	dragoninfo = nullptr;
 	creationwindow = nullptr;
@@ -71,6 +80,7 @@ void mainPage::initElements() {
 	QObject::connect(tryComs, &QPushButton::clicked, this, &mainPage::openComW);
 	exit = new QPushButton("EXIT");
 	exit->setStyleSheet("color: white; background: #F00000; border: none; font-size: 40px");
+	QObject::connect(exit, &QPushButton::clicked, this, &mainPage::back);
 	refresh = new QPushButton("REFRESH");
 	refresh->setStyleSheet("color: white; background: #0B00DA; border: none; font-size: 40px");
 	QObject::connect(refresh, &QPushButton::clicked, this, &mainPage::drawGuiTable);
@@ -97,7 +107,7 @@ void mainPage::initElements() {
         }
 	hbox->addWidget(tryComs);
 	hbox->addWidget(refresh);
-//	hbox->addWidget(exit);
+	hbox->addWidget(exit);
 	hbox->addSpacing(1);
 	hbox->addWidget(username);
 	vbox->addLayout(hbox);
@@ -164,8 +174,15 @@ void mainPage::changeDragon(QString num, int n) {
 	jobjectArray dr = jnienv->NewObjectArray(9, jnienv->FindClass("java/lang/String"), NULL);
 	srand(time(NULL));
 	for (int i = 0; i < 9; ++i) {
+		jstring jstr;
 //		// std::cout << ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text().toStdString() << "\n";
-		jstring jstr = QStr_to_jstr(jnienv, ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text());
+		if (i >= 4 && i <= 6) {
+			jstr = QStr_to_jstr(jnienv, ((QComboBox*)(dragon[n][(i < 3 ? i+1 : i+2)]))->currentText());
+//			std::cout << jnienv->GetStringUTFChars(jstr, nullptr) << "\n";
+		}
+		else {
+			jstr = QStr_to_jstr(jnienv, ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text());
+		}
 		jnienv->SetObjectArrayElement(dr, i, jstr);
 		jnienv->DeleteLocalRef(jstr);
 	}
@@ -368,6 +385,76 @@ void mainPage::drawGuiTable() {
 				case 4:
 					dragon[i][j] = new QLabel(jnienv->GetStringUTFChars(jstring(jnienv->GetObjectArrayElement(curDr, j)), nullptr));
 					dragon[i][j]->setStyleSheet("color: black; background: transparent; border: none; font-size: 12px");
+					break;
+				case 6:
+					dragon[i][j] = new QComboBox();
+					dragon[i][j]->setStyleSheet("background-color: white; border: none; color: black; QComboBox QAbstractItemView { background-color: white; }");
+
+					((QComboBox*)(dragon[i][j]))->addItems({"GREEN", "ORANGE", "YELLOW", "WHITE"});
+					{
+						int ind = 0;
+						std::string curStr = std::string(jnienv->GetStringUTFChars(jstring(jnienv->GetObjectArrayElement(curDr, j)), nullptr));
+						if (curStr == "GREEN") {
+								ind = 0;
+						}
+						else if (curStr == "ORANGE") {
+								ind = 1;
+						}
+						else if (curStr == "YELLOW") {
+								ind = 2;
+						}
+						else {
+								ind = 3;
+						}
+						((QComboBox*)(dragon[i][j]))->setCurrentIndex(ind);
+					}
+					break;
+				case 7:
+ 					dragon[i][j] = new QComboBox();
+ 					dragon[i][j]->setStyleSheet("background-color: white; border: none; color: black; QComboBox QAbstractItemView { background-color: white; }");
+					((QComboBox*)(dragon[i][j]))->addItems({"WATER", "UNDERGROUND", "AIR"});
+					{
+                                                int ind = 0;
+                                                std::string curStr = std::string(jnienv->GetStringUTFChars(jstring(jnienv->GetObjectArrayElement(curDr, j)), nullptr));
+                                                if (curStr == "WATER") {
+                                                                ind = 0;
+                                                }
+                                                else if (curStr == "UNDERGROUND") {
+                                                                ind = 1;
+                                                }
+                                                else {
+                                                                ind = 3;
+                                                }
+                                                ((QComboBox*)(dragon[i][j]))->setCurrentIndex(ind);
+                                        }
+
+					break;
+				case 8:
+					dragon[i][j] = new QComboBox();
+					dragon[i][j]->setStyleSheet("background-color: white; border: none; color: black; QComboBox QAbstractItemView { background-color: white; }");
+					((QComboBox*)(dragon[i][j]))->addItems({"EVIL", "GOOD", "CHAOTIC", "CHAOTIC_EVIL", "FICKLE"});
+					{
+                                                int ind = 0;
+                                                std::string curStr = std::string(jnienv->GetStringUTFChars(jstring(jnienv->GetObjectArrayElement(curDr, j)), nullptr));
+                                                if (curStr == "EVIL") {
+                                                                ind = 0;
+                                                }
+                                                else if (curStr == "GOOD") {
+                                                                ind = 1;
+                                                }
+                                                else if (curStr == "CHAOTIC") {
+                                                                ind = 2;
+                                                }
+                                                else if (curStr == "CHAOTIC_EVIL") {
+                                                                ind = 3;
+                                                }
+						else {
+							ind = 4;
+						}
+                                                ((QComboBox*)(dragon[i][j]))->setCurrentIndex(ind);
+                                        }
+
+					//				((QComboBox*)(dragon[i][j]))->setCurrentIndex(((QComboBox*)(dragon[i][j]))->findData(jnienv->GetStringUTFChars(jstring(jnienv->GetObjectArrayElement(curDr, j)), nullptr)));
 					break;
 				case 12:
 					dragon[i][j] = new QPushButton(txt[6], nullptr);

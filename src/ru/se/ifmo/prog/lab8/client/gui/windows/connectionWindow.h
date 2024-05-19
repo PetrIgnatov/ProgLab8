@@ -13,6 +13,7 @@
 class connectionWindow : public QWidget {
 	public:
 		connectionWindow(QWidget* parent = 0, JNIEnv* env = nullptr, jclass* cl = nullptr);
+		connectionWindow(QWidget* parent = 0, int ph = 0, JNIEnv* env = nullptr, jclass* cl = nullptr);
 	protected:
 		void paintEvent(QPaintEvent* event);
 		void closeEvent(QCloseEvent* event);

@@ -26,7 +26,7 @@ class creationWindow : public QWidget {
 		int datasize;
 		JNIEnv* jnienv;
 		jclass* jcl;
-		QLineEdit** line;
+		QWidget** line;
 		QFormLayout* form;
 		QVBoxLayout* vbox;
 		QPushButton* save;

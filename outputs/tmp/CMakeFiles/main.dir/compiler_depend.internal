@@ -1228,6 +1228,11 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o
  /usr/include/c++/12/thread
  /usr/include/c++/12/bits/std_thread.h
  /usr/include/c++/12/bits/this_thread_sleep.h
+ /usr/include/c++/12/fstream
+ /usr/include/c++/12/bits/codecvt.h
+ /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h
+ /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h
+ /usr/include/c++/12/bits/fstream.tcc
 
 CMakeFiles/main.dir/windows/creationWindow.cpp.o
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.cpp
@@ -1640,6 +1645,21 @@ CMakeFiles/main.dir/windows/creationWindow.cpp.o
  /usr/include/c++/12/istream
  /usr/include/c++/12/bits/istream.tcc
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h
+ /usr/include/qt5/QtWidgets/QComboBox
+ /usr/include/qt5/QtWidgets/qcombobox.h
+ /usr/include/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/qt5/QtWidgets/qstyleoption.h
+ /usr/include/qt5/QtCore/qlocale.h
+ /usr/include/qt5/QtWidgets/qabstractspinbox.h
+ /usr/include/qt5/QtGui/qvalidator.h
+ /usr/include/qt5/QtCore/qregularexpression.h
+ /usr/include/qt5/QtWidgets/qslider.h
+ /usr/include/qt5/QtWidgets/qabstractslider.h
+ /usr/include/qt5/QtWidgets/qstyle.h
+ /usr/include/qt5/QtWidgets/qtabbar.h
+ /usr/include/qt5/QtWidgets/qtabwidget.h
+ /usr/include/qt5/QtWidgets/qrubberband.h
+ /usr/include/qt5/QtCore/qabstractitemmodel.h
 
 CMakeFiles/main.dir/windows/dragonField.cpp.o
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp
@@ -2399,6 +2419,21 @@ CMakeFiles/main.dir/windows/dragonInfo.cpp.o
  /usr/include/c++/12/istream
  /usr/include/c++/12/bits/istream.tcc
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h
+ /usr/include/qt5/QtWidgets/QComboBox
+ /usr/include/qt5/QtWidgets/qcombobox.h
+ /usr/include/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/qt5/QtWidgets/qstyleoption.h
+ /usr/include/qt5/QtCore/qlocale.h
+ /usr/include/qt5/QtWidgets/qabstractspinbox.h
+ /usr/include/qt5/QtGui/qvalidator.h
+ /usr/include/qt5/QtCore/qregularexpression.h
+ /usr/include/qt5/QtWidgets/qslider.h
+ /usr/include/qt5/QtWidgets/qabstractslider.h
+ /usr/include/qt5/QtWidgets/qstyle.h
+ /usr/include/qt5/QtWidgets/qtabbar.h
+ /usr/include/qt5/QtWidgets/qtabwidget.h
+ /usr/include/qt5/QtWidgets/qrubberband.h
+ /usr/include/qt5/QtCore/qabstractitemmodel.h
 
 CMakeFiles/main.dir/windows/filter.cpp.o
  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.cpp
@@ -3230,4 +3265,19 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o
  /usr/include/bits/mathcalls.h
  /usr/include/bits/mathcalls-narrow.h
  /usr/include/bits/iscanonical.h
+ /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/connectionWindow.h
+ /usr/include/qt5/QtWidgets/QComboBox
+ /usr/include/qt5/QtWidgets/qcombobox.h
+ /usr/include/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/qt5/QtWidgets/qstyleoption.h
+ /usr/include/qt5/QtCore/qlocale.h
+ /usr/include/qt5/QtWidgets/qabstractspinbox.h
+ /usr/include/qt5/QtGui/qvalidator.h
+ /usr/include/qt5/QtCore/qregularexpression.h
+ /usr/include/qt5/QtWidgets/qslider.h
+ /usr/include/qt5/QtWidgets/qstyle.h
+ /usr/include/qt5/QtWidgets/qtabbar.h
+ /usr/include/qt5/QtWidgets/qtabwidget.h
+ /usr/include/qt5/QtWidgets/qrubberband.h
+ /usr/include/qt5/QtCore/qabstractitemmodel.h
 

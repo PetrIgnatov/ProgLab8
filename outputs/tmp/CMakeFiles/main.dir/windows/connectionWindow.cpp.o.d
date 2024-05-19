@@ -283,4 +283,8 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o: \
  /usr/include/qt5/QtCore/qeasingcurve.h \
  /usr/include/qt5/QtCore/qabstractanimation.h /usr/include/c++/12/thread \
  /usr/include/c++/12/bits/std_thread.h \
- /usr/include/c++/12/bits/this_thread_sleep.h
+ /usr/include/c++/12/bits/this_thread_sleep.h /usr/include/c++/12/fstream \
+ /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/12/bits/fstream.tcc

@@ -1,4 +1,5 @@
 #include <QWidget>
+#include <string>
 #include <QPushButton>
 #include <QLineEdit>
 #include <QLabel>
@@ -14,6 +15,7 @@
 #include "mainPage.h"
 #include <thread>
 #include <QHBoxLayout>
+#include <fstream>
 
 void connectionWindow::getMsg() {
 	/*jmethodID method = jnienv->GetStaticMethodID(*jcl, "getMsg", "()V");
@@ -28,6 +30,72 @@ void connectionWindow::getMsg() {
 }
 
 connectionWindow::connectionWindow(QWidget* parent, JNIEnv* env, jclass* cl) : QWidget(parent) {
+	jnienv = env;
+	jcl = cl;
+	errType = 0;
+	QPalette backgroundPal = QPalette();
+	std::ifstream f("conndata.conf");
+	std::string fAddr = "", fPort = "";
+	f >> fAddr >> fPort;
+	f.close();
+	this->setFixedHeight(500);
+	this->setFixedWidth(800);
+	backgroundPal.setColor(QPalette::Window, Qt::white);
+	this->setAutoFillBackground(true);
+	this->setPalette(backgroundPal);
+	langBox = new QHBoxLayout();
+	langStr = new QString[]{"РУССКИЙ", "ESPANOL", "HRVATSKI", "SLOVENČINA"};
+	langBtn = new QPushButton*[4];
+	for (int i = 0; i < 4; ++i) {
+		langBtn[i] = new QPushButton(langStr[i]);
+		QObject::connect(langBtn[i], &QPushButton::clicked, this, [this, i](){setLang(i);});
+		langBox->addWidget(langBtn[i]);
+	}
+	vbox = new QVBoxLayout(this);
+	grid = new QGridLayout();
+	txt = nullptr;
+	getText();
+	host = new QLabel(txt[0], this);
+	host->setStyleSheet("color: black; background: #a0ffffff; font-size: 48px");
+	hostIn = new QLineEdit(QString::fromStdString(fAddr), this);
+	hostIn->setStyleSheet("color: black; background: #60ffffff; font-size:48px");
+	port = new QLabel(txt[1], this);
+	port->setStyleSheet("color: black; background: #a0ffffff; font-size: 48px");
+	portIn = new QLineEdit(QString::fromStdString(fPort), this);
+	portIn->setStyleSheet("color: black; background: #60ffffff; font-size:48px");
+	error = new QLabel("", this);
+	error->setStyleSheet("color: black; background: #a0ffffff; font-size: 24px");
+	confirm = new QPushButton(txt[4], this);
+	confirm->setStyleSheet("color: white; background: #00ba18; border: none; font-size: 48px");
+	QObject::connect(confirm, &QPushButton::clicked, this, &connectionWindow::onConClick);
+	butGrid = new QGridLayout();
+	login = new QLabel(txt[2]);
+	login->setStyleSheet("color: black; background: #a0ffffff; font-size: 48px");
+	loginIn = new QLineEdit();
+	loginIn->setStyleSheet("color: black; background: #60ffffff; font-size:48px");
+	password = new QLabel(txt[3]);
+	password->setStyleSheet("color: black; background: #a0ffffff; font-size: 48px");
+	passwordIn = new QLineEdit();
+	passwordIn->setStyleSheet("color: black; background: #60ffffff; font-size:48px");
+	signIn = new QPushButton(txt[6]);
+	signIn->setStyleSheet("color: white; background: #00ba18; border: none; font-size: 48px");
+	reg = new QPushButton(txt[5]);
+	reg->setStyleSheet("color: white; background: #00ba18; border: none; font-size: 48px");
+	QObject::connect(reg, &QPushButton::clicked, this, &connectionWindow::onRegClick);
+	QObject::connect(signIn, &QPushButton::clicked, this, &connectionWindow::onSignInClick);
+	grid->setHorizontalSpacing(10);
+	grid->addWidget(host, 0, 0, Qt::AlignRight);
+	grid->addWidget(hostIn, 0, 1);
+	grid->addWidget(port, 1, 0, Qt::AlignRight);
+	grid->addWidget(portIn, 1, 1);
+	vbox->addStretch(1);
+	vbox->addLayout(langBox);
+	vbox->addLayout(grid);
+	vbox->addWidget(confirm, 1, Qt::AlignBottom);
+	vbox->addWidget(error, 1, Qt::AlignBottom | Qt::AlignHCenter);
+}
+
+connectionWindow::connectionWindow(QWidget* parent, int ph, JNIEnv* env, jclass* cl) : QWidget(parent) {
 	jnienv = env;
 	jcl = cl;
 	errType = 0;
@@ -77,6 +145,7 @@ connectionWindow::connectionWindow(QWidget* parent, JNIEnv* env, jclass* cl) : Q
 	reg->setStyleSheet("color: white; background: #00ba18; border: none; font-size: 48px");
 	QObject::connect(reg, &QPushButton::clicked, this, &connectionWindow::onRegClick);
 	QObject::connect(signIn, &QPushButton::clicked, this, &connectionWindow::onSignInClick);
+	if (ph == 0) {
 	grid->setHorizontalSpacing(10);
 	grid->addWidget(host, 0, 0, Qt::AlignRight);
 	grid->addWidget(hostIn, 0, 1);
@@ -87,6 +156,27 @@ connectionWindow::connectionWindow(QWidget* parent, JNIEnv* env, jclass* cl) : Q
 	vbox->addLayout(grid);
 	vbox->addWidget(confirm, 1, Qt::AlignBottom);
 	vbox->addWidget(error, 1, Qt::AlignBottom | Qt::AlignHCenter);
+	}
+	else {
+		delete host;
+        delete hostIn;
+        delete port;
+        delete portIn;
+        delete confirm;
+        host = nullptr;
+        grid->setHorizontalSpacing(10);
+        grid->addWidget(login, 0, 0, Qt::AlignRight);
+        grid->addWidget(loginIn, 0, 1);
+        grid->addWidget(password, 1, 0, Qt::AlignRight);
+        grid->addWidget(passwordIn, 1, 1);
+        butGrid->addWidget(reg, 0, 0);
+        butGrid->addWidget(signIn, 0, 1);
+	vbox->addStretch(1);
+	vbox->addLayout(langBox);
+	vbox->addLayout(grid);
+        vbox->addLayout(butGrid);
+        vbox->addWidget(error, 1, Qt::AlignBottom | Qt::AlignHCenter);
+	}
 }
 
 void connectionWindow::paintEvent(QPaintEvent* e) {
@@ -164,6 +254,9 @@ void connectionWindow::onConClick() {
 	if (connected) {
 		error->setText(txt[11]);
 		errType = 11;
+		std::ofstream f("conndata.conf");
+		f << hostIn->text().toStdString() << " " << portIn->text().toStdString();
+		f.close();
 		changeWindow();
 		return;
 	}

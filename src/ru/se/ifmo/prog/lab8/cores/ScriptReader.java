@@ -79,6 +79,7 @@ public class ScriptReader {
 						}
 					}
 				}
+				System.out.println(shallows.size());
 			}
 			catch (IOException e) {
 				System.out.println(e.getMessage());

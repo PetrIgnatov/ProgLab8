@@ -1223,7 +1223,12 @@ CMakeFiles/main.dir/windows/connectionWindow.cpp.o: /home/Petrign/Проги/Pro
   /usr/include/qt5/QtCore/qabstractanimation.h \
   /usr/include/c++/12/thread \
   /usr/include/c++/12/bits/std_thread.h \
-  /usr/include/c++/12/bits/this_thread_sleep.h
+  /usr/include/c++/12/bits/this_thread_sleep.h \
+  /usr/include/c++/12/fstream \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc
 
 CMakeFiles/main.dir/windows/creationWindow.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.cpp \
   /usr/include/stdc-predef.h \
@@ -1634,7 +1639,22 @@ CMakeFiles/main.dir/windows/creationWindow.cpp.o: /home/Petrign/Проги/ProgL
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h
+  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
+  /usr/include/qt5/QtWidgets/QComboBox \
+  /usr/include/qt5/QtWidgets/qcombobox.h \
+  /usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/qt5/QtCore/qlocale.h \
+  /usr/include/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/qt5/QtGui/qvalidator.h \
+  /usr/include/qt5/QtCore/qregularexpression.h \
+  /usr/include/qt5/QtWidgets/qslider.h \
+  /usr/include/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/qt5/QtWidgets/qstyle.h \
+  /usr/include/qt5/QtWidgets/qtabbar.h \
+  /usr/include/qt5/QtWidgets/qtabwidget.h \
+  /usr/include/qt5/QtWidgets/qrubberband.h \
+  /usr/include/qt5/QtCore/qabstractitemmodel.h
 
 CMakeFiles/main.dir/windows/dragonField.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonField.cpp \
   /usr/include/stdc-predef.h \
@@ -2391,7 +2411,22 @@ CMakeFiles/main.dir/windows/dragonInfo.cpp.o: /home/Petrign/Проги/ProgLab8/
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h
+  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/helpfulStuff.h \
+  /usr/include/qt5/QtWidgets/QComboBox \
+  /usr/include/qt5/QtWidgets/qcombobox.h \
+  /usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/qt5/QtCore/qlocale.h \
+  /usr/include/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/qt5/QtGui/qvalidator.h \
+  /usr/include/qt5/QtCore/qregularexpression.h \
+  /usr/include/qt5/QtWidgets/qslider.h \
+  /usr/include/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/qt5/QtWidgets/qstyle.h \
+  /usr/include/qt5/QtWidgets/qtabbar.h \
+  /usr/include/qt5/QtWidgets/qtabwidget.h \
+  /usr/include/qt5/QtWidgets/qrubberband.h \
+  /usr/include/qt5/QtCore/qabstractitemmodel.h
 
 CMakeFiles/main.dir/windows/filter.cpp.o: /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.cpp \
   /usr/include/stdc-predef.h \
@@ -3220,12 +3255,43 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls.h \
   /usr/include/bits/mathcalls-narrow.h \
-  /usr/include/bits/iscanonical.h
+  /usr/include/bits/iscanonical.h \
+  /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/connectionWindow.h \
+  /usr/include/qt5/QtWidgets/QComboBox \
+  /usr/include/qt5/QtWidgets/qcombobox.h \
+  /usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/qt5/QtCore/qlocale.h \
+  /usr/include/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/qt5/QtGui/qvalidator.h \
+  /usr/include/qt5/QtCore/qregularexpression.h \
+  /usr/include/qt5/QtWidgets/qslider.h \
+  /usr/include/qt5/QtWidgets/qstyle.h \
+  /usr/include/qt5/QtWidgets/qtabbar.h \
+  /usr/include/qt5/QtWidgets/qtabwidget.h \
+  /usr/include/qt5/QtWidgets/qrubberband.h \
+  /usr/include/qt5/QtCore/qabstractitemmodel.h
 
 
 /usr/include/qt5/QtWidgets/QScrollBar:
 
 /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonInfo.cpp:
+
+/usr/include/qt5/QtCore/qabstractitemmodel.h:
+
+/usr/include/qt5/QtWidgets/qtabwidget.h:
+
+/usr/include/qt5/QtWidgets/qrubberband.h:
+
+/usr/include/qt5/QtWidgets/qtabbar.h:
+
+/usr/include/qt5/QtWidgets/qstyle.h:
+
+/usr/include/qt5/QtCore/qregularexpression.h:
+
+/usr/include/qt5/QtWidgets/qstyleoption.h:
+
+/usr/include/qt5/QtWidgets/QComboBox:
 
 /usr/include/bits/mathcalls.h:
 
@@ -3234,6 +3300,14 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 /usr/include/bits/libm-simd-decl-stubs.h:
 
 /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/creationWindow.cpp:
+
+/usr/include/c++/12/bits/fstream.tcc:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h:
+
+/usr/include/c++/12/fstream:
 
 /usr/include/qt5/QtGui/qpainter.h:
 
@@ -3254,6 +3328,8 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 /usr/include/c++/12/bits/stl_multiset.h:
 
 /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/filter.h:
+
+/usr/include/qt5/QtWidgets/qcombobox.h:
 
 /usr/include/qt5/QtCore/QString:
 
@@ -3326,6 +3402,8 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 /usr/include/qt5/QtCore/qfile.h:
 
 /usr/include/qt5/QtWidgets/qpushbutton.h:
+
+/usr/include/qt5/QtGui/qvalidator.h:
 
 /usr/include/qt5/QtGui/qcursor.h:
 
@@ -3597,6 +3675,8 @@ CMakeFiles/main.dir/windows/mainPage.cpp.o: /home/Petrign/Проги/ProgLab8/sr
 
 /usr/include/strings.h:
 
+/usr/include/qt5/QtWidgets/qabstractitemdelegate.h:
+
 /home/Petrign/Проги/ProgLab8/src/ru/se/ifmo/prog/lab8/client/gui/windows/dragonInfo.h:
 
 /usr/include/bits/floatn.h:
@@ -3742,6 +3822,8 @@ main_autogen/mocs_compilation.cpp:
 /usr/include/c++/12/cctype:
 
 /usr/include/qt5/QtCore/qpair.h:
+
+/usr/include/qt5/QtWidgets/qslider.h:
 
 /usr/include/c++/12/bits/exception.h:
 
@@ -3895,6 +3977,8 @@ main_autogen/mocs_compilation.cpp:
 
 /usr/include/qt5/QtCore/qstringview.h:
 
+/usr/include/c++/12/bits/codecvt.h:
+
 /usr/include/c++/12/thread:
 
 /usr/include/c++/12/bits/cpp_type_traits.h:
@@ -3906,6 +3990,8 @@ main_autogen/mocs_compilation.cpp:
 /usr/include/alloca.h:
 
 /usr/include/c++/12/cstdio:
+
+/usr/include/qt5/QtWidgets/qabstractspinbox.h:
 
 /usr/include/bits/wordsize.h:
 

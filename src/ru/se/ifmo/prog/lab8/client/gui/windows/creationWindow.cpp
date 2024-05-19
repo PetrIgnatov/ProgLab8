@@ -14,6 +14,7 @@
 #include <QFormLayout>
 #include <iostream>
 #include "helpfulStuff.h"
+#include <QComboBox>
 
 creationWindow::creationWindow(QWidget* parent, JNIEnv* env, jclass* cl, QString loginArg, QString passwordArg, QString* txt, mainPage* mainpage) : QWidget(parent) {
 	this->setFixedWidth(480);
@@ -28,7 +29,7 @@ creationWindow::creationWindow(QWidget* parent, JNIEnv* env, jclass* cl, QString
 	jnienv = env;
 	jcl = cl;
 	text = txt;
-	line = new QLineEdit*[9];
+	line = new QWidget*[9];
 	vbox = new QVBoxLayout(this);
 	form = new QFormLayout();
 	save = new QPushButton(txt[5]);
@@ -37,7 +38,35 @@ creationWindow::creationWindow(QWidget* parent, JNIEnv* env, jclass* cl, QString
         error->setStyleSheet("color: black; background: transparent; border: none; font-size: 12px");
 	QObject::connect(save, &QPushButton::clicked, this, &creationWindow::createDragon);
 	for (int i = 0; i < 9; ++i) {
-		line[i] = new QLineEdit("");
+		switch(i) {
+		case 4:
+			line[i] = new QComboBox();
+			line[i]->setMinimumWidth(200);
+
+			line[i]->setStyleSheet("background-color: white; border: none; color: black; QComboBox QAbstractItemView { background-color: white; }");
+
+					((QComboBox*)(line[i]))->addItems({"GREEN", "ORANGE", "YELLOW", "WHITE"});
+			break;
+		case 5:
+			line[i] = new QComboBox();
+			line[i]->setMinimumWidth(200);
+
+			line[i]->setStyleSheet("background-color: white; border: none; color: black; QComboBox QAbstractItemView { background-color: white; }");
+
+					((QComboBox*)(line[i]))->addItems({"WATER", "UNDERGROUND", "AIR"});
+			break;
+		case 6:
+			line[i] = new QComboBox();
+			line[i]->setMinimumWidth(200);
+
+			line[i]->setStyleSheet("background-color: white; border: none; color: black; QComboBox QAbstractItemView { background-color: white; }");
+
+					((QComboBox*)(line[i]))->addItems({"EVIL", "GOOD", "CHAOTIC", "CHAOTIC_EVIL", "FICKLE"});
+			break;
+			default:
+				line[i] = new QLineEdit("");
+				break;
+		}
 		label[i] = new QLabel(txt[8+i+(i>=3?1:0)]);
 		label[i]->setStyleSheet("color: black; background: transparent; border: none");
 		form->addRow(label[i], line[i]);
@@ -91,8 +120,14 @@ void creationWindow::createDragon() {
 	}
 	jobjectArray dr = jnienv->NewObjectArray(9, jnienv->FindClass("java/lang/String"), NULL);
 	for (int i = 0; i < 9; ++i) {
+		jstring jstr;
 //		// std::cout << ((QLineEdit*)(dragon[n][(i < 3 ? i+1 : i+2)]))->text().toStdString() << "\n";
-		jstring jstr = QStr_to_jstr(jnienv, line[i]->text()); //Проверить аргументы
+		if (i >= 4 && i <= 6) {
+			jstr = QStr_to_jstr(jnienv, ((QComboBox*)(line[i]))->currentText());
+		}
+		else {
+		jstr = QStr_to_jstr(jnienv, ((QLineEdit*)(line[i]))->text());
+		}
 		jnienv->SetObjectArrayElement(dr, i, jstr);
 		jnienv->DeleteLocalRef(jstr);
 	}

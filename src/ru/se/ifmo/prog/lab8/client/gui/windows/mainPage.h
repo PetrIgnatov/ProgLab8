@@ -105,6 +105,7 @@ class mainPage : public QWidget {
 		void showInfo(jstring* data, int n);
 		void showCreation();
 		void createFilter(int i);
+		void back();
 	public slots:
 		void drawGuiTable();
 		void destroy();
